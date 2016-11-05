@@ -1,5 +1,5 @@
-"""
-"""
+/*
+*/
 
 public boolean makeBricks(int small, int big, int goal) {
   if((big*5)+small<goal){
