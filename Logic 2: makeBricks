@@ -1,0 +1,11 @@
+"""
+"""
+
+public boolean makeBricks(int small, int big, int goal) {
+  if((big*5)+small<goal){
+    return false;
+  }else if((goal%5)-small>0){
+    return false;
+  }
+  return true;
+}
