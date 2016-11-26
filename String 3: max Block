@@ -19,6 +19,5 @@ public int maxBlock(String str) {
   }
   if(str.equals("")){
     return 0;
-  }
-  return top+1;
+  }return top+1;
 }
