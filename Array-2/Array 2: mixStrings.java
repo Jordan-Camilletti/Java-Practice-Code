@@ -6,12 +6,12 @@ public String mixString(String a, String b) {
     for(int x=0;x<bArr.length-1;x++){
       wrd=wrd+a.substring(x,x+1)+b.substring(x,x+1);
     }
-    wrd=wrd+a.substring(bArr.length,aArr.length);
+    wrd=wrd+a.substring(bArr.length-1,aArr.length-1);
   }else{
     for(int x=0;x<aArr.length-1;x++){
       wrd=wrd+a.substring(x,x+1)+b.substring(x,x+1);
     }
-    wrd=wrd+b.substring(aArr.length,bArr.length);
+    wrd=wrd+b.substring(aArr.length-1,bArr.length-1);
   }
   return wrd;
 }
