@@ -2,9 +2,9 @@ public String repeatSeparator(String word, String sep, int count) {
   String wrd="";
   for(int x=0;x<(count*2)-1;x++){
     if(x%2==0){
-      wrd+=sep;
-    }else{
       wrd+=word;
+    }else{
+      wrd+=sep;
     }
   }
   return wrd;
