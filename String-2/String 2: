@@ -1,7 +1,11 @@
-public String oneTwo(String str) {
+public String repeatSeparator(String word, String sep, int count) {
   String wrd="";
-  String arr[]=str.split("");
-  for(int x=0;x<str.length();x+=3){
-    wrd=wrd+arr[1]+arr[2]+arr[1];
+  for(int x=0;x<(count*2)-1;x++){
+    if(x%2==0){
+      wrd+=sep;
+    }else{
+      wrd+=word;
+    }
   }
+  return wrd;
 }
