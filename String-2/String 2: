@@ -1,1 +1,7 @@
-
+public String oneTwo(String str) {
+  String wrd="";
+  String arr[]=str.split("");
+  for(int x=0;x<str.length();x+=3){
+    wrd=wrd+arr[1]+arr[2]+arr[1];
+  }
+}
