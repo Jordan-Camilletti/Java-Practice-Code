@@ -1,14 +1,12 @@
 public boolean match(String wrd1, String wrd2){
-  String[] longArr=wrd1.split("");
-  String[] shortArr=wrd2.split("");
-  for(int x=0;x<longArr.length-shortArr.length;x++){
-    for(int y=x;y<x+shortArr.length;y++){
-      if(longArr[y].equals(shortArr[x])==false) return false;
-    }
-  }
-  return true;
+  String[] arr1=wrd1.split("");
+  String[] arr2=wrd2.split("");
+  for(int x=0;x<arr1.length;x++){
+    if(arr1[x].equals(arr2[x])==false) return false;
+  }return true;
 }
 
 public String withoutString(String base, String remove) {
-  
+  String newBase = (base.toLowerCase()).replace((remove.toLowerCase()), "");
+  return base;
 }
