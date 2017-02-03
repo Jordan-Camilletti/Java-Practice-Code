@@ -7,6 +7,8 @@ public boolean match(String wrd1, String wrd2){
 }
 
 public String withoutString(String base, String remove) {
-  String newBase = (base.toLowerCase()).replace((remove.toLowerCase()), "");
-  return base;
+  String newBase = base.replace(remove, "");
+  String[] arr1=base.split("");
+  String[] arr2=newBase.split("");
+  return newBase;
 }
