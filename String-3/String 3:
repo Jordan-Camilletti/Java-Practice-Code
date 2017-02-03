@@ -1,0 +1,14 @@
+public boolean match(String wrd1, String wrd2){
+  String[] longArr=wrd1.split("");
+  String[] shortArr=wrd2.split("");
+  for(int x=0;x<longArr.length-shortArr.length;x++){
+    for(int y=x;y<x+shortArr.length;y++){
+      if(longArr[y].equals(shortArr[x])==false) return false;
+    }
+  }
+  return true;
+}
+
+public String withoutString(String base, String remove) {
+  
+}
