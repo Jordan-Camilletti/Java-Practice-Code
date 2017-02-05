@@ -1,3 +1,7 @@
 public int[] copyEvens(int[] nums, int count) {
-  int[] arr;
+  int[] arr=new int[0];
+  while(){
+    
+  }
+  return arr;
 }
