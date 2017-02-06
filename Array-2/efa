@@ -1,0 +1,3 @@
+public int[] zeroMax(int[] nums) {
+  int[] newArr=new int[nums.length-1];
+}
