@@ -11,7 +11,7 @@ public int[] zeroMax(int[] nums) {
   int[] newArr=new int[nums.length];
   for(int x=0;x<newArr.length;x++){
     if(nums[x]==0){
-      
+      newArr[x]=next(nums,x);
     }else{
       newArr[x]=nums[x];
     }
