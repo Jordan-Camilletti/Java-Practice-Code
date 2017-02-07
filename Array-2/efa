@@ -1,5 +1,8 @@
 public int next(int[] arr,int start){
-  
+  if(start>=arr.lengt-1) return 0;
+  for(int x=start;x<arr.length;x++){
+    if(arr[x]%2!=0) return arr[x];
+  }return 0;
 }
 
 public int[] zeroMax(int[] nums) {
