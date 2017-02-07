@@ -1,3 +1,11 @@
+public int next(int[] arr,int start){
+  
+}
+
 public int[] zeroMax(int[] nums) {
   int[] newArr=new int[nums.length-1];
+  for(int x=0;x<nums.length;x++){
+    newArr[x]=next();
+  }
+  return newArr;
 }
