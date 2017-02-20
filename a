@@ -1,1 +1,9 @@
 /**/
+
+public int matchUp(String[] a, String[] b) {
+  int total=0;
+  for(int x=0;x<a.length;x++){
+    if(a[x] b[x]) total++;
+  }
+  return 0;
+}
