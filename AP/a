@@ -3,7 +3,7 @@
 public int matchUp(String[] a, String[] b) {
   int total=0;
   for(int x=0;x<a.length;x++){
-    if(a[x] b[x]) total++;
+    if(!a[x].equals("") && !b[x].equals("") && a[x].substring(0,1).equals(b[x].substring(0,1))) total++;
   }
   return total;
 }
