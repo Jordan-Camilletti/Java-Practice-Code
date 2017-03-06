@@ -1,9 +1,0 @@
-public boolean endOther(String a1, String b1) {
-  String a=a1.toLowerCase();
-  String b=b1.toLowerCase();
-  if(a.length()>b.length()){
-    return(a.substring(a.length()-b.length()).equals(b));
-  }else{
-    return(b.substring(b.length()-a.length()).equals(a));
-  }
-}
