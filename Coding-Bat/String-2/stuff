@@ -1,6 +1,6 @@
 public boolean endOther(String a1, String b1) {
-  a=a1.toLowerCase();
-  b=b1.toLowerCase();
+  String a=a1.toLowerCase();
+  String b=b1.toLowerCase();
   if(a.length()>b.length()){
     return(a.substring(a.length()-b.length()).equals(b));
   }else{
