@@ -1,3 +1,7 @@
+/*A sandwich is two pieces of bread with something in between. 
+Return the string that is between the first and last appearance of "bread" in the given string, 
+or return the empty string "" if there are not two pieces of bread.*/
+
 public String getSandwich(String str){
   String[] arr=str.split("");
   int lastBread=-1;
@@ -16,5 +20,5 @@ public String getSandwich(String str){
     }
   }
   if(lastBread==firstBread) return "";
-  return 
+  return (str.substring(firstBread+1,lastBread));
 }
