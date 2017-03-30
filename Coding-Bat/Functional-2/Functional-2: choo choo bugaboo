@@ -1,1 +1,6 @@
 
+
+public List<Integer> square56(List<Integer> nums){
+  nums.reaplaceAll();
+  return nums;
+}
