@@ -1,9 +1,0 @@
-/**/
-
-public boolean dividesSelf(int n){
-  int i=1;
-  for(int x=0;x<=(Integer.toString(n)).length();x++){
-    i*=10;
-    if(n%i==0 || n%(n%i)!=0) return false;
-  }return true;
-}
