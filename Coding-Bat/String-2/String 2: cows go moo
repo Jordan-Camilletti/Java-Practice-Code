@@ -1,5 +1,0 @@
-public String plusOut(String str, String word) {
-  String arr[]=str.split("");
-  for(int x=0;x<arr.length-word.length();x++){
-  }
-}
