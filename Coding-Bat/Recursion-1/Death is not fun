@@ -1,0 +1,4 @@
+public int count8(int n) {
+  if(n==8) return 1;
+  return(count8(n/8));
+}
