@@ -3,6 +3,6 @@
 public int countHi(String str){
   if(str.length()<=2 && !str.equals("hi")) return 0;
   if(str.equals("hi")) return 1;
-  if((str.substring(0,2)).equals("hi")) return 1+countHi(str.substring(2,str.length()));
-  return countHi(str.substring(2,str.length()));
+  if((str.substring(0,2)).equals("hi")) return 1+countHi(str.substring(1,str.length()));
+  return countHi(str.substring(1,str.length()));
 }
