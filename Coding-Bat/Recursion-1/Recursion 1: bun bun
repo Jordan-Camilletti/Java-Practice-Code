@@ -1,1 +1,8 @@
 /**/
+
+public String changePi(String str) {
+  if(str.equals("pi")) return "3.14";
+  if(str.length()<=2) return str;
+  if((str.substring(0,2)).equals("pi")) return ("3.14"+changePi(str.substring(2,str.length())));
+  return changePi(str.substring(2,str.length()));
+}
