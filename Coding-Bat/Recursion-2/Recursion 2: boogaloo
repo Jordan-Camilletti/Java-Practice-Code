@@ -1,8 +1,8 @@
 /**/
 
 public boolean groupSum(int start, int[] nums, int target) {
-  if(start==nums.length&&nums[nums.length]==target) return true;
-  if(start==nums.length) return false;
-  if() return groupSum(start+1,nums,target);
-  return groupSum(start+1,nums,target);
+  if(start>=nums.length) return (target==0);
+  if(groupSum(start+1, nums, target-nums[start])) return true;
+  if(groupSum(start+1, nums, target)) return true;
+  return false;
 }
