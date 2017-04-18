@@ -8,4 +8,5 @@ public int centeredAverage(int[] nums){
     if(smallest>=nums[x]) smallest=nums[x];
   }
   tot-=(biggest+smallest);
+  return tot/(nums.length-2);
 }
