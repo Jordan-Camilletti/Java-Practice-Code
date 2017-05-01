@@ -2,8 +2,10 @@
 
 public String wordEnds(String str, String word){
   String newWrd="";
-  for(int x=0;x<str.length()-word.length();x++){
-    if((str.substring(x+1,x+1+word.length())).equals(word)) newWrd+=str.substring(x,x+1);
+  for(int x=1;x<str.length()-1;x++){
+    if((str.substring(x,x+word.length())).equals(word)){
+      newWrd=newWrd+str.substring(x-1,x)+str.substring(x+word.length(),x+word.length()+1);
+    }
   }
   return newWrd;
 }
