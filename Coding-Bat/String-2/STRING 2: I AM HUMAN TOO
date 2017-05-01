@@ -2,7 +2,7 @@
 
 public String wordEnds(String str, String word){
   String newWrd="";
-  for(int x=0;x<str.length();x++){
+  for(int x=0;x<str.length()-word.length();x++){
     if((str.substring(x+1,x+1+word.length())).equals(word)) newWrd+=str.substring(x,x+1);
   }
   return newWrd;
