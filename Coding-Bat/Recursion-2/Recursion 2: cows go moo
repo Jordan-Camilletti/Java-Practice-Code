@@ -2,6 +2,6 @@
 
 public boolean groupSum5(int start, int[] nums, int target) {
   if(start>=nums.length) return (target==0);
-  if(nums[start]==5) return(groudSum5(start+1,nums,target-5));
-  return(groupSum5()||groupSum5());
+  if(nums[start]%5==0) return(groupSum5(start+1,nums,target-nums[start]));
+  return(groupSum5(start+1,nums,target-nums[start])||groupSum5(start+1,nums,target));
 }
