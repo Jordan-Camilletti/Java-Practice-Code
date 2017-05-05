@@ -1,9 +1,0 @@
-/**/
-
-public String repeatFront(String str, int n) {
-  String newWrd="";
-  for(int x=n;x>0;x--){
-    newWrd+=str.substring(0,x);
-  }
-  return newWrd;
-}
