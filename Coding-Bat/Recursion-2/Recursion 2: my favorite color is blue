@@ -1,1 +1,5 @@
 /**/
+
+public boolean splitOdd10(int[] nums){
+  
+}
