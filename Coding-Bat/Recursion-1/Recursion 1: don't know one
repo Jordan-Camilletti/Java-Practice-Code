@@ -1,5 +1,6 @@
 /**/
 
 public int countHi2(String str) {
-  
+  if() return()
+  return(coundHi2());
 }
