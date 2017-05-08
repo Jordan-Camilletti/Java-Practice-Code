@@ -1,8 +1,8 @@
 /**/
 
 public int countHi2(String str) {
-  if(str.length()==0) return(0);
-  if((str.substring(0,1)).equals("x")) return(countHi2(str.substring(3,str.length()));
-  if((str.substring(0,2)).equals("hi")) return(1+countHit2(str.substring(1,str.length())));
-  return(countHit2(str.substring(1,str.length())));
+  if(str.length()<2) return(0);
+  if((str.substring(0,1)).equals("x")) return(countHi2(str.substring(3,str.length())));
+  if((str.substring(0,2)).equals("hi")) return(1+countHi2(str.substring(1,str.length())));
+  return(countHi2(str.substring(1,str.length())));
 }
