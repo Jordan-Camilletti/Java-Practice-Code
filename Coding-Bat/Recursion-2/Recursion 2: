@@ -1,1 +1,6 @@
 /**/
+
+public boolean groupSumClump(int start, int[] nums, int target){
+  if(start>=nums.length) return(target==0);
+  return (groupSumClump(start+1,nums,target-nums[start])||groupSumClump(start+1,nums,target));
+}
