@@ -2,5 +2,7 @@
 
 public boolean groupSumClump(int start, int[] nums, int target){
   if(start>=nums.length) return(target==0);
-  return (groupSumClump(start+1,nums,target-nums[start])||groupSumClump(start+1,nums,target));
+  if(start!=0&&nums[start-1]==nums[start]) return(groupSumClump(start+1,nums,target));
+  if(start+1!=nums.length&&nums[start+1]==nums[start]) return(groupSumClump(start+1,nums,target));
+  return(groupSumClump(start+1,nums,target-nums[start])||groupSumClump(start+1,nums,target));
 }
