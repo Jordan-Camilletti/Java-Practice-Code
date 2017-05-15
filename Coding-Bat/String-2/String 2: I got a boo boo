@@ -1,1 +1,7 @@
 /**/
+
+public String plusOut(String str, String word) {
+  for(int x=0;x<word.length();x++){
+    
+  }
+}
