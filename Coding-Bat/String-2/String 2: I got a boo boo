@@ -2,6 +2,9 @@
 
 public String zipZap(String str) {
   for(int x=0;x<str.length();x++){
-    
+    if((str.substring()).equals("z")&&(str.substring()).equals("p")){
+      
+    }
   }
+  return ;
 }
