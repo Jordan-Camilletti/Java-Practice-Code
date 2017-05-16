@@ -1,10 +1,7 @@
 /**/
 
-public String plusOut(String str, String word) {
-  String newWrd="";
-  for(int x=0;x<str.length()-word.length();x++){
-    if((str.substring(x,x+word.length())).equals(word)) newWrd=newWrd+word;
-    else newWrd=newWrd+"+";
+public String zipZap(String str) {
+  for(int x=0;x<str.length();x++){
+    
   }
-  return newWrd;
 }
