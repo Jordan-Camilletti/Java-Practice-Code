@@ -1,10 +1,10 @@
 /**/
 
 public String zipZap(String str) {
-  for(int x=0;x<str.length();x++){
-    if((str.substring()).equals("z")&&(str.substring()).equals("p")){
-      
+  for(int x=0;x<str.length()-2;x++){
+    if((str.substring(x,x+1)).equals("z")&&(str.substring(x+2,x+3)).equals("p")){
+      str=str.substring(0,x+1)+str.substring(x+2,str.length());
     }
   }
-  return ;
+  return str;
 }
