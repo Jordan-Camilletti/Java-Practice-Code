@@ -1,1 +1,17 @@
 /**/
+
+public String[] mergeTwo(String[] a, String[] b, int n) {
+  int currA=0,currB=0;
+  String[] newArr=new String[n];
+  while(currA<a.length&&currB<b.length){
+    if(){
+      newArr.append(a[currA]);
+      currA++;
+    }else{
+      newArr.append(b[currB]);
+      currB++;
+    }
+    if(currA+currB==n) break;
+  }
+  return newArr;
+}
