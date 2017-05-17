@@ -5,14 +5,14 @@ public String[] mergeTwo(String[] a, String[] b, int n) {
   String[] newArr=new String[n];
   while(currA<a.length&&currB<b.length){
     if(a[currA].compareTo(b[currB])<=0){
-      if(a[currA].equals(newArr[currA+currB-1])){
-        newArr[currA+currB]=b[currb];
+      if(currA+currB>0&&a[currA].equals(newArr[currA+currB-1])){
+        newArr[currA+currB]=b[currB];
       }else{
         newArr[currA+currB]=a[currA];
       }
       currA++;
     }else{
-      if(b[currB].equals(newArr[currA+currB-1])){
+      if(currA+currB>0&&b[currB].equals(newArr[currA+currB-1])){
         newArr[currA+currB]=a[currA];
       }else{
         newArr[currA+currB]=b[currB];
