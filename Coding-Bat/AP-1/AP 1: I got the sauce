@@ -4,11 +4,19 @@ public String[] mergeTwo(String[] a, String[] b, int n) {
   int currA=0,currB=0;
   String[] newArr=new String[n];
   while(currA<a.length&&currB<b.length){
-    if(){
-      newArr.append(a[currA]);
+    if(a[currA].compareTo(b[currB])<=0){
+      if(a[currA].equals(newArr[currA+currB-1])){
+        newArr[currA+currB]=b[currb];
+      }else{
+        newArr[currA+currB]=a[currA];
+      }
       currA++;
     }else{
-      newArr.append(b[currB]);
+      if(b[currB].equals(newArr[currA+currB-1])){
+        newArr[currA+currB]=a[currA];
+      }else{
+        newArr[currA+currB]=b[currB];
+      }
       currB++;
     }
     if(currA+currB==n) break;
