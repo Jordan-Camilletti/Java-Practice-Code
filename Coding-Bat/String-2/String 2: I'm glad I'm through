@@ -1,1 +1,8 @@
-/**/
+public boolean xyzMiddle(String str) {
+  if(str.length()%2==0){
+    
+  }else{
+    
+  }
+  return true;
+}
