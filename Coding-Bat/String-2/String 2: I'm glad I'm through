@@ -1,6 +1,8 @@
 /**/
 
 public boolean xyzMiddle(String str) {
+  String arr[]=str.split("xyz");
+  if(arr.length<2&&!str.equals("xyz")) return false;
   if(str.length()%2==0){
     
   }else{
