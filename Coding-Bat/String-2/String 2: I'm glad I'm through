@@ -1,18 +1,14 @@
 /**/
 
-public boolean xyzMiddle(String str) {
-  if(str.equals("xyz")) return true;
-  String arr[]=str.split("xyz");
-  if(arr.length<2) return false;
-  if(arr.length>3){
-    for(int x=0;x<str.length()-2;x++){
-      if(str.substring(x,x+3).equals("xyz")&&Math.abs(str.substring(0,x).length()-str.substring(x+3,str.length()).length())<=1) return true;
+public boolean xyzMiddle(String str){
+  String arr[]=new String[2];
+  if(str.length()<=2) return false;
+  for(int x=0;x<str.length()-2;x++){
+    if(str.substring(x,x+3).equals("xyz")){
+      arr[0]=str.substring(0,x);
+      arr[1]=str.substring(x+3,str.length());
+      if(Math.abs(arr[0].length()-arr[1].length())<=1) return true;
     }
-    return false;
   }
-  if(str.length()%2==0){
-    return Math.abs(arr[0].length()-arr[1].length())<=1;
-  }else{
-    return arr[0].length()==arr[1].length();
-  }
+  return false;
 }
