@@ -6,7 +6,7 @@ public boolean xyzMiddle(String str) {
   if(arr.length<2) return false;
   if(arr.length>3){
     for(int x=0;x<str.length()-2;x++){
-      if(str.substring(x,x+3).equals("xyz")&&x+1==str.length()/2) return true;
+      if(str.substring(x,x+3).equals("xyz")&&Math.abs(str.substring(0,x).length()-str.substring(x+3,str.length()).length())<=1) return true;
     }
     return false;
   }
