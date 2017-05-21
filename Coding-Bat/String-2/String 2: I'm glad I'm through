@@ -1,12 +1,13 @@
 /**/
 
 public boolean xyzMiddle(String str) {
+  if(str.equals("xyz")) return true;
   String arr[]=str.split("xyz");
-  if(arr.length<2&&!str.equals("xyz")) return false;
+  if(arr.length<2) return false;
   if(str.length()%2==0){
-    
+    return Math.abs(arr[0].length()-arr[1].length())<=1;
   }else{
-    
+    return arr[0].length()==arr[1].length();
   }
   return true;
 }
