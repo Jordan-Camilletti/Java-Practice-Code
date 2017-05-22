@@ -9,5 +9,6 @@ public String plusOut(String str, String word) {
     }
     newWrd=newWrd+word;
   }
+  if(str.substring(str.length()-word.length(),str.length()).equals(word)) newWrd=newWrd+word;
   return newWrd;
 }
