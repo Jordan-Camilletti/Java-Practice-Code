@@ -1,1 +1,13 @@
 /**/
+
+public String plusOut(String str, String word) {
+  String arr[]=str.split(word);
+  String newWrd="";
+  for(int x=0;x<arr.length;x++){
+    for(int y=0;y<arr[x].length();y++){
+      newWrd=newWrd+"+";
+    }
+    newWrd=newWrd+word;
+  }
+  return newWrd;
+}
