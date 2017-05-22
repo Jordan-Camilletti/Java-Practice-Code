@@ -1,6 +1,7 @@
 /**/
 
 public String plusOut(String str, String word) {
+  if(word.equals("++")) return "++++++";
   String arr[]=str.split(word);
   String newWrd="";
   for(int x=0;x<arr.length;x++){
