@@ -1,2 +1,9 @@
 /**/
 
+public String[] fizzArray2(int n) {
+  String arr[]=new String[n];
+  for(int x=0;x<n;x++){
+    arr[x]=n[x].toString();
+  }
+  return arr;
+}
