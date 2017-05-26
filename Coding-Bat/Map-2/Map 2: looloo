@@ -6,14 +6,18 @@ public Boolean check(int x, int y, int[] used){
 }
 
 public String[] allSwap(String[] strings){
-  int used[]=new int[0];
+  int used[]=new int[0],n=0;
   String thingy="";
-  for(int x=0;x<strings.length-1;x++){
-    for(int y=strings.length;y<x;y--){
+  for(int x=0;x<strings.length;x++){
+    for(int y=x;y<strings.length;y++){
       if(strings[x].substring(0,1).equals(strings[y].substring(0,1))&&check(x,y,used)){
         thingy=strings[x];
         strings[x]=strings[y];
         strings[y]=thingy;
+        used[n]=x;
+        n++;
+        used[n]=y;
+        n++;
       }
     }
   }
