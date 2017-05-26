@@ -1,5 +1,6 @@
-/**/
-
 public String[] allSwap(String[] strings) {
-  
+  int used[]=new int[];
+  for(int x=0;x<strings.length;x++){
+    
+  }
 }
