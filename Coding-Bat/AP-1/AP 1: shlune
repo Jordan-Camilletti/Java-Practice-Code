@@ -1,5 +1,5 @@
-/**/
-
 public int sumHeights(int[] heights, int start, int end) {
-  
+  for(int x=start;x<=end;x++){
+    
+  }
 }
