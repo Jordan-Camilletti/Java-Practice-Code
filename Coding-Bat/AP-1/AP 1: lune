@@ -5,7 +5,7 @@ public int scoreUp(String[] key, String[] answers) {
   for(int x=0;x<key.length;x++){
     if(key[x].equals(answers[x])){
       score+=4;
-    }else if(!answer.equals("?")){
+    }else if(!answers[x].equals("?")){
       score-=1;
     }
   }
