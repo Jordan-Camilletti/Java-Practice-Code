@@ -1,2 +1,14 @@
 /**/
 
+public int scoreUp(String[] key, String[] answers) {
+  int score=0;
+  for(int x=0;x<key.length;x++){
+    if(key[x].equals(answers[x])){
+      
+    }else if(answers[x].equals("?")){
+      
+    }else{
+      
+    }
+  }
+}
