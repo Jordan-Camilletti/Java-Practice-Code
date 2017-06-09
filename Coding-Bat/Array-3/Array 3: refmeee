@@ -1,0 +1,10 @@
+/**/
+
+public boolean canBalance(int[] nums) {
+  int tot1=0,tot2=0;
+  for(int x=0;x<nums.length;x++){
+    tot1=0;
+    tot2=0;
+  }
+  return false;
+}
