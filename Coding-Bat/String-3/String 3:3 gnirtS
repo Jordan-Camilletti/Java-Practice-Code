@@ -2,6 +2,8 @@
 
 public boolean gHappy(String str) {
   String arr[]=str.split("");
+  if(str.length()==1) return false;
+  if(str.length()==0||str.equals("gg")) return true;
   for(int x=0;x<arr.length;x++){
     if(arr[x].equals("g")){
       if(x==0&&!arr[x+1].equals("g")) return false;
@@ -11,4 +13,3 @@ public boolean gHappy(String str) {
   }
   return true;
 }
-  
