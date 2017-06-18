@@ -1,14 +1,9 @@
 /**/
 
-public String notReplace(String str) {
+public boolean gHappy(String str) {
   String arr[]=str.split("");
-  String newWrd="";
-  for(int x=1;x<arr.length;x++){
-    if(arr[x-1].equals("i")&&arr[x].equals("t")&&!Character.isLetter(arr[x-2].charAt(0))&&!Character.isLetter(arr[x+1].charAt(0))){
-      newWrd=newWrd+arr[x]+" not";
-    }else{
-      newWrd=newWrd+arr[x];
-    }
+  for(int x=0;x<arr.length;x++){
+    
   }
-  return newWrd;
-}//s.charAt(0)
+  return true;
+}
