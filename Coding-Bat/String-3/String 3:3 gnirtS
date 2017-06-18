@@ -1,5 +1,8 @@
 /**/
 
 public String notReplace(String str) {
-  
+  String arr[]=str.split("");
+  for(int x=0;x<arr.length-1;x++){
+    if(arr[x].equals("i")&&arr[x+1].equals("t"))
+  }
 }
