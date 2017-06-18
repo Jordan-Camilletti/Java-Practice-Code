@@ -2,9 +2,12 @@
 
 public String notReplace(String str) {
   String arr[]=str.split("");
-  for(int x=0;x<arr.length-1;x++){
-    if(arr[x].equals("i")&&arr[x+1].equals("t")&&!Character.isLetter(arr[x-1])&&!Character.isLetter(arr[x+2])){
-      
+  String newWrd="";
+  for(int x=1;x<arr.length;x++){
+    if(arr[x-1].equals("i")&&arr[x].equals("t")&&!Character.isLetter(arr[x-2])&&!Character.isLetter(arr[x+1])){
+      newWrd=newWrd+arr[x]+" not"
+    }else{
+      newWrd=newWrd+arr[x];
     }
   }
 }
