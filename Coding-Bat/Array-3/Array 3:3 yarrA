@@ -1,11 +1,15 @@
 /**/
 
 public int[] squareUp(int n) {
-  int num=0
+  int num=0;
   int[] arr=new int[n*n];
   for(int curr=1;curr<=n;curr++){
-    for(int x=1;x<=curr;x++){
-      arr[num]=x;
+    for(int zeros=;zeros;zeros){
+      arr[num]=0;
+      num++;
+    }
+    for(int nums=;nums;nums){
+      arr[num]=nums;
       num++;
     }
   }
