@@ -1,1 +1,6 @@
 /**/
+
+public int[] squareUp(int n) {
+  int[] arr=new int[n*n];
+  
+}
