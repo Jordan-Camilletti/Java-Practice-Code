@@ -1,5 +1,21 @@
 /**/
 
-public String[] firstSwap(String[] strings) {
-  
+public String[] firstSwap(String[] strings){
+  char used[]=new char[0];
+  int t=0;
+  Map<String, String> map=new HashMap<String, String>();
+  String thingy;
+  for(int x=0;x<strings.length;x++){
+    if(map.containsKey(strings[x].substring(0,1))){
+      thingy=strings[x];
+      strings[x]=strings[Integer.parseInt(map.get(strings[x].substring(0,1)))];
+      strings[Integer.parseInt(map.get(strings[x].substring(0,1)))]=thingy;
+      map.remove(strings[x].substring(0,1));
+    }else{
+      map.put(strings[x].substring(0,1),Integer.toString(x));
+      used[t]=strings[x].substring(0,1);
+      t++;
+    }
+  }
+  return strings;
 }
