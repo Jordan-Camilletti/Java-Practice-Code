@@ -1,21 +1,26 @@
 /**/
 
 public String[] firstSwap(String[] strings){
-  char used[]=new char[0];
+  String used[]=new String[strings.length];
   int t=0;
+  boolean use=true;
   Map<String, String> map=new HashMap<String, String>();
   String thingy;
   for(int x=0;x<strings.length;x++){
-    if(map.containsKey(strings[x].substring(0,1))){
+    for(int n=0;n<used.length;n++){
+      if(used[n].equals(strings[x].substring(0,1))) use=false;
+    }
+    if(map.containsKey(strings[x].substring(0,1))&&use){
       thingy=strings[x];
       strings[x]=strings[Integer.parseInt(map.get(strings[x].substring(0,1)))];
       strings[Integer.parseInt(map.get(strings[x].substring(0,1)))]=thingy;
       map.remove(strings[x].substring(0,1));
-    }else{
+    }else if(use){
       map.put(strings[x].substring(0,1),Integer.toString(x));
       used[t]=strings[x].substring(0,1);
       t++;
     }
+    use=true;
   }
   return strings;
 }
