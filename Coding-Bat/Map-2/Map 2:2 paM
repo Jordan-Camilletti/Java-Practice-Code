@@ -3,16 +3,21 @@
 public String[] firstSwap(String[] strings){
   Map<String, String> map=new HashMap<String, String>();
   List<String>used=new ArrayList<>();
+  boolean using=true;
   String thingy;
   for(int x=0;x<strings.length;x++){
-    if(map.containsKey(strings[x].substring(0,1))){
+    for(int t=0;t<used.size();t++){
+      if(used.get(t).equals(strings[x].substring(0,1))) using=false;
+    }
+    if(map.containsKey(strings[x].substring(0,1))&&using){
       thingy=strings[x];
       strings[x]=strings[Integer.parseInt(map.get(strings[x].substring(0,1)))];
       strings[Integer.parseInt(map.get(strings[x].substring(0,1)))]=thingy;
       map.remove(strings[x].substring(0,1));
-    }else{
+    }else if(using){
       map.put(strings[x].substring(0,1),Integer.toString(x));
     }
+    using=true;
   }
   return strings;
 }
