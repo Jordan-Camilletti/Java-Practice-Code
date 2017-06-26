@@ -2,10 +2,10 @@
 
 public int[] tenRun(int[] nums) {
   int curr=0;
-  for(int x=0;x<nums.length-1;x++){
+  for(int x=0;x<nums.length;x++){
     if(nums[x]%10==0){
       curr=nums[x];
-    }else{
+    }else if(curr!=0){
       nums[x]=curr;
     }
   }
