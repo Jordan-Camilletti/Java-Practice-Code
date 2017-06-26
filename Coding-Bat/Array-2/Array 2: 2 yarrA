@@ -1,1 +1,13 @@
 /**/
+
+public int[] tenRun(int[] nums) {
+  int curr=0;
+  for(int x=0;x<nums.length-1;x++){
+    if(nums[x]%10==0){
+      curr=nums[x];
+    }else{
+      nums[x]=curr;
+    }
+  }
+  return nums;
+}
