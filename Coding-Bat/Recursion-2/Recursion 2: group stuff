@@ -1,13 +1,10 @@
 /**/
 
-public boolean meth(int[] nums, int group1, int group2, int curr){
-  if(curr==nums.length) return group1==group2;
-  if(nums[curr]%5==0) group1+=nums[curr];
-  else if(nums[curr]%5!=0 && nums[curr]%3==0) group2+=nums[curr];
-  //else group2+=nums[curr];
-  return meth(nums,group1,group2,curr+1)||meth(nums,group1+nums[curr],group2,curr+1)||meth(nums,group1,group2+nums[curr],curr+1);
+public boolean meth(int nums, int g1, int g2, int c){
+  if(c==nums.length) return g1==g2;
+  return(meth(nums,g1+nums[c],g2,c++)||meth(nums,g1,g2+nums[c],c++));
 }
 
-public boolean split53(int[] nums){
-  return meth(nums,0,0,0);
+public boolean splitArray(int[] nums) {
+  
 }
