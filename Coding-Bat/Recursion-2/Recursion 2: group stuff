@@ -1,0 +1,12 @@
+/**/
+
+public boolean meth(int[] nums, int group1, int group2, int curr){
+  if(curr==nums.length-1) return group1==group2;
+  if(nums[curr]%5==0) group1+=nums[curr];
+  else if(nums[curr]%5!=0 && nums[curr]%3==0) group2+=nums[curr];
+  return(nums,group1,group2,curr+1);
+}
+
+public boolean split53(int[] nums){
+  return meth(nums,0,0,0);
+}
