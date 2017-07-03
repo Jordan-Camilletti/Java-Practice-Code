@@ -5,6 +5,6 @@ public boolean stuff(int[] nums, int g1, int g2, int c){
   return(stuff(nums,g1,g2+nums[c],c+1)||stuff(nums,g1+nums[c],g2,c+1));
 }
 
-public boolean splitOdd10(int[] nums) {
+public boolean splitOdd10(int[] nums){
   return(stuff(nums,0,0,0));
 }
