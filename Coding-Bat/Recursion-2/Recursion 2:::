@@ -8,5 +8,5 @@ public boolean stuff(int[] nums, int g1, int g2, int c){
 }
 
 public boolean split53(int[] nums) {
-  
+  return(stuff(nums,0,0,0));
 }
