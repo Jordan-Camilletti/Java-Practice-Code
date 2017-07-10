@@ -2,15 +2,16 @@
 
 public int average(int[] scores, int s, int e){
   int score=0;
-  for(int curr=s;curr<=e;curr++){
+  for(int curr=s;curr<e;curr++){
     score+=scores[curr];
   }
+  score/=(scores.length/2);
   return(score);
 }
 
 public int scoresAverage(int[] scores) {
-  int a=average(scores,0,(scores.length/2)-1);
+  int a=average(scores,0,(scores.length/2));
   int b=average(scores,scores.length/2,scores.length-1);
-  if(a>b) return average(scores,0,(scores.length/2)-1);
-  return average(scores,scores.length/2,scores.length-1);
+  if(a>b) return a;
+  return b;
 }
