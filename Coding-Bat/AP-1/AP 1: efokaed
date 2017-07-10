@@ -1,2 +1,14 @@
 /**/
 
+public int average(int[] scores, int s, int e){
+  int score=0;
+  for(int curr=s;curr<e;curr++){
+    score+=scores[curr];
+  }
+  score/=(s-e);
+  return(score);
+}
+
+public int scoresAverage(int[] scores) {
+  
+}
