@@ -11,7 +11,7 @@ public int average(int[] scores, int s, int e){
 
 public int scoresAverage(int[] scores) {
   int a=average(scores,0,(scores.length/2));
-  int b=average(scores,scores.length/2,scores.length-1);
+  int b=average(scores,scores.length/2,scores.length);
   if(a>b) return a;
   return b;
 }
