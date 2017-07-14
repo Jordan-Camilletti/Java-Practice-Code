@@ -1,2 +1,15 @@
 /**/
 
+public int countClumps(int[] nums) {
+  int clumps=0;
+  boolean in=false;
+  for(int n=0;n<nums.length-1;n++){
+    if(nums[n]==nums[n+1]&&!in){
+      in=true;
+      clumps;
+    }else if(nums[n]!=nums[n+1]){
+      in=false;
+    }
+  }
+  return clumps;
+}
