@@ -3,7 +3,7 @@
 public String mirrorEnds(String string){
   String wrd="";
   for(int l=0;l<string.length();l++){
-    if(!string[l].equals(string[string.length()-l-1])) return wrd;
+    if(!string.substring(l,l+1).equals(string.substring(string.length()-1-l,string.length()-l))) return wrd;
     wrd+=string[l];
   }
   return wrd;
