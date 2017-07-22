@@ -1,10 +1,10 @@
 /**/
 
 public String mirrorEnds(String wrd){
-  String string="";
+  String str="";
   for(int l=0;l<wrd.length();l++){
-    if(!wrd.substring(l,l+1).equals(wrd.substring(wrd.length()-1-l,wrd.length()-l))) return string;
-    string+=wrd.substring(l,l+1);
+    if(!wrd.substring(l,l+1).equals(wrd.substring(wrd.length()-1-l,wrd.length()-l))) return str;
+    str+=wrd.substring(l,l+1);
   }
-  return string;
+  return str;
 }
