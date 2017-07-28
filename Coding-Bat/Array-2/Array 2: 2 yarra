@@ -1,17 +1,17 @@
 /**/
 
 public int[] evenOdd(int[] nums) {
-  List arr=new ArrayList();
+  int[] arr=new int[nums.length];
+  int a=0;
+  int b=nums.length-1;
   for(int x=0;x<nums.length;x++){
     if(nums[x]%2==0){
-      arr.add(0,nums[x]);
+      arr[a]=nums[x];
+      a+=1;
     }else{
-      arr.add(arr.size(),nums[x]);
+      arr[b]=nums[x];
+      b-=1;
     }
   }
-  int[] returnThis=new int[arr.size()];
-  for(int i=0;i<arr.size();i++){
-    returnThis[i]=arr[i];
-  }
-  return returnThis;
+  return arr;
 }
