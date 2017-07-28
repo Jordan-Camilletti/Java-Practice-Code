@@ -1,1 +1,13 @@
 /**/
+
+public int[] evenOdd(int[] nums) {
+  List arr = new ArrayList();
+  for(int x=0;x<nums.length;x++){
+    if(nums[x]%2==0){
+      arr.add(0,nums[x]);
+    }else{
+      arr.add(arr.length,nums[x]);
+    }
+  }
+  return arr;
+}
