@@ -9,6 +9,9 @@ public int[] evenOdd(int[] nums) {
       arr.add(arr.size(),nums[x]);
     }
   }
-  int[] returnThis = arr.toArray(new int[arr.size()]);
+  int[] returnThis=new int[arr.size()];
+  for(int i=0;i<arr.size();i++){
+    returnThis[i]=arr[i];
+  }
   return returnThis;
 }
