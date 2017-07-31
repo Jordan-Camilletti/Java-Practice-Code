@@ -2,7 +2,7 @@
 
 public int commonTwo(String[] a, String[] b) {
   int aNum=0,bNum=0,diff=0;
-  while(aNum<a.length||bNum<b.length){
+  while(aNum<a.length&&bNum<b.length){
     if(a[aNum].compareTo(b[bNum])==0){
       diff+=1;
       aNum+=1;
