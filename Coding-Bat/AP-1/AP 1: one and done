@@ -5,8 +5,12 @@ public int commonTwo(String[] a, String[] b) {
   while(aNum<a.length&&bNum<b.length){
     if(a[aNum].compareTo(b[bNum])==0){
       diff+=1;
-      aNum+=1;
-      bNum+=1;
+      while(a[aNum].equals(a[aNum+1])){
+        aNum+=1;
+      }
+      while(b[bNum].equals(b[bNum+1)){
+        bNum+=1;
+      }
     }else if(a[aNum].compareTo(b[bNum])<0){
       aNum+=1;
     }else{
