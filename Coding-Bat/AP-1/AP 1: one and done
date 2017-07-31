@@ -2,15 +2,16 @@
 
 public int commonTwo(String[] a, String[] b) {
   int aNum=0,bNum=0,diff=0;
+  String used="";
   while(aNum<a.length&&bNum<b.length){
-    if(a[aNum].compareTo(b[bNum])==0){
+    if(a[aNum].compareTo(b[bNum])==0&&!a[aNum].equals("")){
       diff+=1;
-      while(a[aNum].equals(a[aNum+1])){
-        aNum+=1;
+      used=used+a[aNum];
+      for(String str: used.split("")){
+        if(str.equals(a[aNum])) diff-=1;
       }
-      while(b[bNum].equals(b[bNum+1)){
-        bNum+=1;
-      }
+      aNum+=1;
+      bNum+=1;
     }else if(a[aNum].compareTo(b[bNum])<0){
       aNum+=1;
     }else{
