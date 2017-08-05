@@ -6,7 +6,7 @@ public int[] withoutTen(int[] nums){
       for(int c=x;c<nums.length-1;c++){
         nums[c]=nums[c+1];
       }
-      nums[nums.length-1]=10;
+      nums[nums.length-1]=0;
     }
   }
   return nums;
