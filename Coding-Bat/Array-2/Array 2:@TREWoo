@@ -1,5 +1,13 @@
 /**/
 
-public int[] withoutTen(int[] nums) {
-  
+public int[] withoutTen(int[] nums){
+  for(int x=0;x<nums.length;x++){
+    if(nums[x]==10){
+      for(int c=x;c<nums.length-1;c++){
+        nums[c]=nums[c+1];
+      }
+      nums[nums.length-1]=10;
+    }
+  }
+  return nums;
 }
