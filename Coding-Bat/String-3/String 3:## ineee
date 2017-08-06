@@ -1,1 +1,13 @@
 /**/
+
+public String sameEnds(String string) {
+  String end="";
+  for(int x=0;x<string.length();x++){
+    if((string.substring()).equals(string.substring())){
+      
+    }else{
+      return end;
+    }
+  }
+  return end;
+}
