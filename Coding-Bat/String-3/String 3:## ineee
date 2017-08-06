@@ -1,13 +1,8 @@
 /**/
 
-public String sameEnds(String string) {
-  String end="";
-  for(int x=0;x<string.length();x++){
-    if((string.substring(x,x+1)).equals(string.substring(string.length()-x-2,string.length()-x-1))){
-      end+=string.substring(x,x+1);
-    }else{
-      return end;
-    }
+public String sameEnds(String string){
+  for(int x=0;x<=string.lenth()/2;x++){
+    if((string.substring(0,x)).equals(string.substring())) return string.substring(0,x);
   }
-  return end;
+  return "";
 }
