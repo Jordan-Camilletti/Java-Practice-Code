@@ -3,8 +3,8 @@
 public String sameEnds(String string) {
   String end="";
   for(int x=0;x<string.length();x++){
-    if((string.substring()).equals(string.substring())){
-      
+    if((string.substring(x,x+1)).equals(string.substring(string.length()-x-2,string.length()-x-1))){
+      end+=string.substring(x,x+1);
     }else{
       return end;
     }
