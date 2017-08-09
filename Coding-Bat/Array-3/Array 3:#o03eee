@@ -1,5 +1,5 @@
 /**/
 
-public int[] fix34(int[] nums) {
+public int maxMirror(int[] nums) {
   
 }
