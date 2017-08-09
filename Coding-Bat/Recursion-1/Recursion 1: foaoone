@@ -2,6 +2,6 @@
 
 public boolean array220(int[] nums, int index) {
   if(index>=nums.length) return false;
-  if(index>0 && nums[index]/10==nums[index-1]) return true;
+  if(index>0 && nums[index-1]*10==nums[index]) return true;
   return array220(nums,index+1);
 }
