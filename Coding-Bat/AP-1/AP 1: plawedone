@@ -1,1 +1,12 @@
 /**/
+
+public boolean scoresClump(int[] scores) {
+  if(scores.length>=3){
+    for(int x=0;x<scores.length-3;x++){
+      if(scores[x+1]-scores[x]>2||scores[x+2]-scores[x]>2||scores[x+2]-scores[x+1]>2) return false;
+    }
+  }else{
+    return false;
+  }
+  return true;
+}
