@@ -2,7 +2,7 @@
 
 public boolean scoresClump(int[] scores) {
   for(int x=0;x<scores.length-2;x++){
-    if(scores[x+2]-scores[x+1]==scores[x+1]-scores[x]&&scores[x+1]-scores[x]<=2) return true;
+    if(scores[x+2]-scores[x+1]<=2&&scores[x+1]-scores[x]<=2&&scores[x+2]-scores[x]<=2) return true;
   }
   return false;
 }
