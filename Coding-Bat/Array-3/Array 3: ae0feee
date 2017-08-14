@@ -9,7 +9,7 @@ public int sumNumbers(String str) {
     else newStr=newStr+str.substring(x,x+1);
   }
   for(String s: newStr.split(" ")){
-    if(!s.equals(" ")) tot+=Integer.parseInt(s);
+    if(!s.equals(" ")&&!s.equals("")) tot+=Integer.parseInt(s);
   }
   return tot;
 }
