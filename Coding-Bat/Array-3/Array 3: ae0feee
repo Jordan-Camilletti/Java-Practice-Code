@@ -8,9 +8,8 @@ public int sumNumbers(String str) {
     if(!Character.isDigit(y)) newStr=newStr+" ";
     else newStr=newStr+str.substring(x,x+1);
   }
-  String nums[]=newStr.split(" ");
-  for(String n: nums){
-    tot+=Integer.parseInt(n);
+  for(String s, newStr.split(" ")){
+    if(!s.equals(" ")) tot+=Integer.parseInt(s);
   }
   return tot;
 }
