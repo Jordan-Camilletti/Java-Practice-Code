@@ -1,2 +1,11 @@
 /**/
 
+public int sumNumbers(String str) {
+  int tot=0;
+  String newStr="";
+  for(int x=0;x<str.length();x++){
+    char y=(str.substring(x,x+1)).charAt(0);
+    if(!Character.isDigit(y)) newStr=newStr+" ";
+    else newStr=newStr+str.substring(x,x+1);
+  }
+}
