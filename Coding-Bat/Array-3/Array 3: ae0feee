@@ -8,7 +8,7 @@ public int sumNumbers(String str) {
     if(!Character.isDigit(y)) newStr=newStr+" ";
     else newStr=newStr+str.substring(x,x+1);
   }
-  for(String s, newStr.split(" ")){
+  for(String s: newStr.split(" ")){
     if(!s.equals(" ")) tot+=Integer.parseInt(s);
   }
   return tot;
