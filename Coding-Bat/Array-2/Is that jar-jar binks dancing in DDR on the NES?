@@ -1,0 +1,7 @@
+/**/
+
+public boolean twoTwo(int[] nums) {
+  for(int x=0;x<nums.length;x++){
+    
+  }
+}
