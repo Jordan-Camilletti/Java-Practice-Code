@@ -1,7 +1,8 @@
 /**/
 
 public boolean twoTwo(int[] nums) {
-  for(int x=0;x<nums.length;x++){
-    
+  for(int x=1;x<nums.length-1;x++){
+    if(nums[x]==2&&(nums[x-1]!=2||nums[x+1]!=2)) return false;
   }
+  return true;
 }
