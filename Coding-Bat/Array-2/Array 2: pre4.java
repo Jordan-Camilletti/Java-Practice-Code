@@ -1,4 +1,6 @@
-/**/
+/*Given a non-empty array of ints, 
+return a new array containing the elements from the original array that come before the first 4 in the original array.
+The original array will contain at least one 4.*/
 
 public int[] pre4(int[] nums) {
   int c=0;
