@@ -1,8 +1,19 @@
 /**/
 
-public boolean twoTwo(int[] nums) {
-  for(int x=1;x<nums.length-1;x++){
-    if(nums[x]==2&&(nums[x-1]!=2||nums[x+1]!=2)) return false;
+public int[] pre4(int[] nums) {
+  int c=0;
+  for(int n=0;n<nums.length;n++){
+    if(nums[n]==4) c=n;
   }
-  return true;
+  int newArr[]=new int[c];
+  c=0;
+  for(int n: nums){
+    if(n==4){
+      return newArr;
+    }else{
+      newArr[c]=n;
+      c+=1;
+    }
+  }
+  return newArr;
 }
