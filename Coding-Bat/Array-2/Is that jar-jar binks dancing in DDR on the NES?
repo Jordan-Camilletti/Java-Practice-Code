@@ -2,7 +2,7 @@
 
 public int[] pre4(int[] nums) {
   int c=0;
-  for(int n=0;n<nums.length;n++){
+  for(int n=nums.length-1;n>=0;n--){
     if(nums[n]==4) c=n;
   }
   int newArr[]=new int[c];
