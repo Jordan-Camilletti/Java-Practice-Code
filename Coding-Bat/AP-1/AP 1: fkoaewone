@@ -1,1 +1,11 @@
 /**/
+
+public List wordsWithoutList(String[] words, int len) {
+  List wrds=new ArrayList();
+  for(String word: words){
+    if(word.length()!=len){
+      wrds.add(word);
+    }
+  }
+  return wrds;
+}
