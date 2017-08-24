@@ -28,7 +28,7 @@ public class Main {
 			field[rndY][rndX]=9;
 			for(int y=0;y<3;y++){
 				for(int x=0;x<3;x++){
-					add stuff
+					field[y][x]+=1;
 				}
 			}
 		}
