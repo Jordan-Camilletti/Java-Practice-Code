@@ -3,26 +3,37 @@
 package main;
 
 import java.util.Arrays;
+import java.util.Scanner;
 //import javax.swing.*;
 
 public class Main {
+	public static int reveal(){
+		return 0;
+	}
+	
 	public static void main(String[] args){
-		int xLen=12,yLen=12;
-		boolean[][] revieled=new boolean[yLen][xLen];
+		Scanner sc=new Scanner(System.in);
+		int xLen=12,yLen=12,choiceX=0,choiceY=0;
+		boolean[][] revealed=new boolean[yLen][xLen];
 		int[][] field=new int[yLen][xLen];
 		for(int y=0;y<yLen;y++){
-			Arrays.fill(revieled[y], true);
+			Arrays.fill(revealed[y], false);
 			Arrays.fill(field[y], 0);
 		}
-		for(int y=0;y<12;y++){
-			for(int x=0;x<12;x++){
-				if(revieled[y][x]){
-					System.out.print(field[y][x]);
-				}else{
-					System.out.print("X");
+		while(reveal()!=-1){
+			choiceX=sc.nextInt();
+			choiceY=sc.nextInt();
+			revealed[choiceY][choiceX]=true;
+			for(int y=0;y<12;y++){
+				for(int x=0;x<12;x++){
+					if(revealed[y][x]){
+						System.out.print(field[y][x]);
+					}else{
+						System.out.print("X");
+					}
 				}
+				System.out.print("\n");
 			}
-			System.out.print("\n");
 		}
 		/*JFrame frame=new JFrame("XD");
 		frame.setVisible(true);
