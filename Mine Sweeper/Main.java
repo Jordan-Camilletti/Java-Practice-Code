@@ -11,8 +11,8 @@ public class Main {
 		boolean[][] revieled=new boolean[yLen][xLen];
 		int[][] field=new int[yLen][xLen];
 		for(int y=0;y<yLen;y++){
-			Arrays.fill(revieled, true);
-			Arrays.fill(field, 0);
+			Arrays.fill(revieled[y], true);
+			Arrays.fill(field[y], 0);
 		}
 		for(int y=0;y<12;y++){
 			for(int x=0;x<12;x++){
