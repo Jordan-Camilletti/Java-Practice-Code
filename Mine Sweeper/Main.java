@@ -4,6 +4,7 @@ package main;
 
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.Random;
 //import javax.swing.*;
 
 public class Main {
@@ -13,15 +14,16 @@ public class Main {
 	
 	public static void main(String[] args){
 		Scanner sc=new Scanner(System.in);
+		Random rnd=new Random();
 		int xLen=12,yLen=12,choiceX=0,choiceY=0;
-		boolean[][] revealed=new boolean[yLen][xLen];
 		int[][] field=new int[yLen][xLen];
+		boolean[][] revealed=new boolean[yLen][xLen];
 		for(int y=0;y<yLen;y++){//Creating the field
 			Arrays.fill(revealed[y], true);
 			Arrays.fill(field[y], 0);
 		}
-		for(int m=0;m<5;m++){//Adding mines, 9=mine
-			
+		for(int m=0;m<(xLen+yLen)/2;m++){//Adding mines, 9=mine
+			field[rnd.nextInt(12)][rnd.nextInt(12)]=9;
 		}
 		while(reveal()!=9){
 			choiceX=sc.nextInt();
