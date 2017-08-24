@@ -15,15 +15,22 @@ public class Main {
 	public static void main(String[] args){
 		Scanner sc=new Scanner(System.in);
 		Random rnd=new Random();
-		int xLen=12,yLen=12,choiceX=0,choiceY=0;
+		int xLen=12,yLen=12,choiceX=0,choiceY=0,rndX=0,rndY=0;
 		int[][] field=new int[yLen][xLen];
 		boolean[][] revealed=new boolean[yLen][xLen];
 		for(int y=0;y<yLen;y++){//Creating the field
-			Arrays.fill(revealed[y], true);
+			Arrays.fill(revealed[y], true);//Change this to false later
 			Arrays.fill(field[y], 0);
 		}
 		for(int m=0;m<(xLen+yLen)/2;m++){//Adding mines, 9=mine
-			field[rnd.nextInt(12)][rnd.nextInt(12)]=9;
+			rndX=rnd.nextInt(12);
+			rndY=rnd.nextInt(12);
+			field[rndY][rndX]=9;
+			for(int y=0;y<3;y++){
+				for(int x=0;x<3;x++){
+					add stuff
+				}
+			}
 		}
 		while(reveal()!=9){
 			choiceX=sc.nextInt();
