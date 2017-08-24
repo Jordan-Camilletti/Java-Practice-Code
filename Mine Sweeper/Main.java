@@ -7,10 +7,13 @@ import java.util.Arrays;
 
 public class Main {
 	public static void main(String[] args){
-		boolean[][] revieled=new boolean[12][12];
-		int[][] field=new int[12][12];
-		Arrays.fill(revieled, false);
-		Arrays.fill(field, 0);
+		int xLen=12,yLen=12;
+		boolean[][] revieled=new boolean[yLen][xLen];
+		int[][] field=new int[yLen][xLen];
+		for(int y=0;y<yLen;y++){
+			Arrays.fill(revieled, true);
+			Arrays.fill(field, 0);
+		}
 		for(int y=0;y<12;y++){
 			for(int x=0;x<12;x++){
 				if(revieled[y][x]){
