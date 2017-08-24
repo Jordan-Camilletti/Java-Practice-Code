@@ -7,7 +7,7 @@ import java.util.Scanner;
 //import javax.swing.*;
 
 public class Main {
-	public static int reveal(){
+	public static int reveal(){//Revealing a spot on the field
 		return 0;
 	}
 	
@@ -16,11 +16,14 @@ public class Main {
 		int xLen=12,yLen=12,choiceX=0,choiceY=0;
 		boolean[][] revealed=new boolean[yLen][xLen];
 		int[][] field=new int[yLen][xLen];
-		for(int y=0;y<yLen;y++){
-			Arrays.fill(revealed[y], false);
+		for(int y=0;y<yLen;y++){//Creating the field
+			Arrays.fill(revealed[y], true);
 			Arrays.fill(field[y], 0);
 		}
-		while(reveal()!=-1){
+		for(int m=0;m<5;m++){//Adding mines, 9=mine
+			
+		}
+		while(reveal()!=9){
 			choiceX=sc.nextInt();
 			choiceY=sc.nextInt();
 			revealed[choiceY][choiceX]=true;
