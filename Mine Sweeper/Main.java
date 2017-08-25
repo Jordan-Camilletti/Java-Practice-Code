@@ -9,10 +9,15 @@ import java.util.Random;
 
 public class Main {
 	public static boolean[][] reveal(int[][] field, boolean[][] revealed, int choiceX, int choiceY, int xLen, int yLen){//Revealing a spot on the field
-		for(int y=-1;y<=1;y++){
-			for(int x=-1;x<=1;x++){
-				if(choiceX+x>=0&&choiceX+x<xLen&&choiceY+y>=0&&choiceY+y<yLen&&(x!=0&&y!=0)){
-					revealed=reveal(field,revealed,choiceX+x,choiceY+y,xLen,yLen);
+		if(field[choiceY][choiceX]==0&&!revealed[choiceY][choiceX]){
+			for(int y=-1;y<=1;y++){
+				for(int x=-1;x<=1;x++){
+					if(x!=0||y!=0){
+						try{
+							revealed[choiceY+y][choiceX+x]=true;
+							//revealed=reveal(field,revealed,choiceX+x,choiceY+y,xLen,yLen);
+						}catch(java.lang.ArrayIndexOutOfBoundsException e){}		
+					}
 				}
 			}
 		}
@@ -38,9 +43,7 @@ public class Main {
 				for(int x=-1;x<=1;x++){
 					try{
 						field[rndY+y][rndX+x]+=1;
-					}catch(java.lang.ArrayIndexOutOfBoundsException e){
-						
-					}
+					}catch(java.lang.ArrayIndexOutOfBoundsException e){}
 				}
 			}
 		}
