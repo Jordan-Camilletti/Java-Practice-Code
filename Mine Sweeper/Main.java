@@ -59,8 +59,8 @@ public class Main {
 				}
 				System.out.print("\n");
 			}
-			choiceX=sc.nextInt();
-			choiceY=sc.nextInt();
+			choiceX=sc.nextInt()-1;
+			choiceY=sc.nextInt()-1;
 			revealed=reveal(field,revealed,choiceX,choiceY,xLen,yLen);
 		}
 		/*JFrame frame=new JFrame("XD");
