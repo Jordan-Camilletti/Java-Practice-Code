@@ -8,8 +8,25 @@ import java.util.Random;
 //import javax.swing.*;
 
 public class Main {
-	public static int[][] revealZero(int[][] field, int choiceX, int choiceY){//Revealing a spot on the field
-		return field;
+	public static boolean[][] revealZero(int[][] field, boolean[][] revealed, int choiceX, int choiceY){//Revealing a spot on the field
+		if(field[choiceY][choiceX]==0){
+			for(int x=-1;x<=1;x++){
+				try{
+					revealed=revealZero(field,revealed,choiceX+x,choiceY+1);
+				}finally{}
+				try{
+					revealed=revealZero(field,revealed,choiceX+x,choiceY-1);
+				}finally{}
+			}
+			try{
+				revealed=revealZero(field,revealed,choiceX-1,choiceY);
+			}finally{}
+			try{
+				revealed=revealZero(field,revealed,choiceX+1,choiceY);
+			}finally{}
+		}
+		revealed[choiceY][choiceX]=true;
+		return revealed;
 	}
 	
 	public static void main(String[] args){
@@ -52,7 +69,7 @@ public class Main {
 			choiceY=sc.nextInt();
 			revealed[choiceY][choiceX]=true;
 			if(field[choiceY][choiceX]==0){
-				field=revealZero(field,choiceX,choiceY);
+				revealed=revealZero(field,revealed,choiceX,choiceY);
 			}
 		}
 		/*JFrame frame=new JFrame("XD");
