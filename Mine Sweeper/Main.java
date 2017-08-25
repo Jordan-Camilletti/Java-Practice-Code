@@ -8,20 +8,24 @@ import java.util.Random;
 //import javax.swing.*;
 
 public class Main {
-	public static boolean[][] reveal(int[][] field, boolean[][] revealed, int choiceX, int choiceY, int xLen, int yLen){//Revealing a spot on the field
-		if(field[choiceY][choiceX]==0&&!revealed[choiceY][choiceX]){
-			for(int y=-1;y<=1;y++){
-				for(int x=-1;x<=1;x++){
-					if(x!=0||y!=0){
-						try{
-							revealed[choiceY+y][choiceX+x]=true;
-							//revealed=reveal(field,revealed,choiceX+x,choiceY+y,xLen,yLen);
-						}catch(java.lang.ArrayIndexOutOfBoundsException e){}		
+	public static int[][] reveal(int[][] field, int[][] revealed, int choiceX, int choiceY, String flag, int xLen, int yLen){//Revealing a spot on the field
+		if(flag.equals("R")){
+			if(field[choiceY][choiceX]==0&&revealed[choiceY][choiceX]==0){
+				for(int y=-1;y<=1;y++){
+					for(int x=-1;x<=1;x++){
+						if(x!=0||y!=0){
+							try{
+								revealed[choiceY+y][choiceX+x]=1;
+								//revealed=reveal(field,revealed,choiceX+x,choiceY+y,xLen,yLen);
+							}catch(java.lang.ArrayIndexOutOfBoundsException e){}		
+						}
 					}
 				}
 			}
+			revealed[choiceY][choiceX]=1;
+		}else if(flag.equals("F")){
+			revealed[choiceY][choiceX]=2;
 		}
-		revealed[choiceY][choiceX]=true;
 		return revealed;
 	}
 	
@@ -30,9 +34,10 @@ public class Main {
 		Random rnd=new Random();
 		int xLen=12,yLen=12,choiceX=0,choiceY=0,rndX=0,rndY=0;
 		int[][] field=new int[yLen][xLen];
-		boolean[][] revealed=new boolean[yLen][xLen];
+		int[][] revealed=new int[yLen][xLen];//0=not revealed, 1=revealed, 2=flagged
+		String flag="";//R=reveal, F=flag
 		for(int y=0;y<yLen;y++){//Creating the field
-			Arrays.fill(revealed[y], false);
+			Arrays.fill(revealed[y], 0);
 			Arrays.fill(field[y], 0);
 		}
 		for(int m=0;m<(xLen+yLen)/2;m++){//Adding mines, 9=mine
@@ -47,21 +52,24 @@ public class Main {
 				}
 			}
 		}
-		while(field[choiceY][choiceX]!=9||(field[choiceY][choiceX]==9&&!revealed[choiceY][choiceX])){
+		while(field[choiceY][choiceX]!=9||(field[choiceY][choiceX]==9&&revealed[choiceY][choiceX]==0)){
 			for(int y=0;y<yLen;y++){
 				for(int x=0;x<xLen;x++){
-					if(revealed[y][x]){
+					if(revealed[y][x]==1){
 						if(field[y][x]>9) field[y][x]=9;
 						System.out.print(field[y][x]);
-					}else{
+					}else if(revealed[y][x]==0){
 						System.out.print("X");
+					}else{
+						System.out.print("F");
 					}
 				}
 				System.out.print("\n");
 			}
 			choiceX=sc.nextInt()-1;
 			choiceY=sc.nextInt()-1;
-			revealed=reveal(field,revealed,choiceX,choiceY,xLen,yLen);
+			flag=sc.nextLine();
+			revealed=reveal(field,revealed,choiceX,choiceY,flag,xLen,yLen);
 		}
 		/*JFrame frame=new JFrame("XD");
 		frame.setVisible(true);
