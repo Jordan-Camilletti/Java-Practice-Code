@@ -8,22 +8,17 @@ import java.util.Random;
 //import javax.swing.*;
 
 public class Main {
-	public static boolean[][] revealZero(int[][] field, boolean[][] revealed, int choiceX, int choiceY){//Revealing a spot on the field
-		if(field[choiceY][choiceX]==0){
-			for(int x=-1;x<=1;x++){
-				try{
-					revealed=revealZero(field,revealed,choiceX+x,choiceY+1);
-				}finally{}
-				try{
-					revealed=revealZero(field,revealed,choiceX+x,choiceY-1);
-				}finally{}
+	public static boolean[][] reveal(int[][] field, boolean[][] revealed, int choiceX, int choiceY, int xLen, int yLen){//Revealing a spot on the field
+		if(choiceX>=0&&choiceX<xLen&&choiceY>=0&&choiceY<yLen&&field[choiceY][choiceX]==0){
+			for(int y=-1;y<=1;y++){
+				for(int x=-1;x<=1;x++){
+					if(x!=0&&y!=0){
+						try{
+						revealed=reveal(field,revealed,choiceX+x,choiceY+y,xLen,yLen);
+						}finally{}
+					}
+				}
 			}
-			try{
-				revealed=revealZero(field,revealed,choiceX-1,choiceY);
-			}finally{}
-			try{
-				revealed=revealZero(field,revealed,choiceX+1,choiceY);
-			}finally{}
 		}
 		revealed[choiceY][choiceX]=true;
 		return revealed;
@@ -36,7 +31,7 @@ public class Main {
 		int[][] field=new int[yLen][xLen];
 		boolean[][] revealed=new boolean[yLen][xLen];
 		for(int y=0;y<yLen;y++){//Creating the field
-			Arrays.fill(revealed[y], false);//Change this to false later
+			Arrays.fill(revealed[y], false);
 			Arrays.fill(field[y], 0);
 		}
 		for(int m=0;m<(xLen+yLen)/2;m++){//Adding mines, 9=mine
@@ -53,9 +48,9 @@ public class Main {
 				}
 			}
 		}
-		while(field[choiceY][choiceX]!=9&&revealed[choiceY][choiceX]==true){
-			for(int y=0;y<12;y++){
-				for(int x=0;x<12;x++){
+		while(field[choiceY][choiceX]!=9||(field[choiceY][choiceX]==9&&!revealed[choiceY][choiceX])){
+			for(int y=0;y<yLen;y++){
+				for(int x=0;x<xLen;x++){
 					if(revealed[y][x]){
 						if(field[y][x]>9) field[y][x]=9;
 						System.out.print(field[y][x]);
@@ -67,10 +62,7 @@ public class Main {
 			}
 			choiceX=sc.nextInt();
 			choiceY=sc.nextInt();
-			revealed[choiceY][choiceX]=true;
-			if(field[choiceY][choiceX]==0){
-				revealed=revealZero(field,revealed,choiceX,choiceY);
-			}
+			revealed=reveal(field,revealed,choiceX,choiceY,xLen,yLen);
 		}
 		/*JFrame frame=new JFrame("XD");
 		frame.setVisible(true);
