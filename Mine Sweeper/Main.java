@@ -9,14 +9,10 @@ import java.util.Random;
 
 public class Main {
 	public static boolean[][] reveal(int[][] field, boolean[][] revealed, int choiceX, int choiceY, int xLen, int yLen){//Revealing a spot on the field
-		if(choiceX>=0&&choiceX<xLen&&choiceY>=0&&choiceY<yLen&&field[choiceY][choiceX]==0){
-			for(int y=-1;y<=1;y++){
-				for(int x=-1;x<=1;x++){
-					if(x!=0&&y!=0){
-						try{
-						revealed=reveal(field,revealed,choiceX+x,choiceY+y,xLen,yLen);
-						}finally{}
-					}
+		for(int y=-1;y<=1;y++){
+			for(int x=-1;x<=1;x++){
+				if(choiceX+x>=0&&choiceX+x<xLen&&choiceY+y>=0&&choiceY+y<yLen&&(x!=0&&y!=0)){
+					revealed=reveal(field,revealed,choiceX+x,choiceY+y,xLen,yLen);
 				}
 			}
 		}
