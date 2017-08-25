@@ -9,7 +9,7 @@ import java.util.Random;
 
 public class Main {
 	public static int[][] reveal(int[][] field, int[][] revealed, int choiceX, int choiceY, String flag, int xLen, int yLen){//Revealing a spot on the field
-		if(flag.equals("R")){
+		if(flag.equals(" R")){
 			if(field[choiceY][choiceX]==0&&revealed[choiceY][choiceX]==0){
 				for(int y=-1;y<=1;y++){
 					for(int x=-1;x<=1;x++){
@@ -23,7 +23,7 @@ public class Main {
 				}
 			}
 			revealed[choiceY][choiceX]=1;
-		}else if(flag.equals("F")){
+		}else if(flag.equals(" F")){
 			revealed[choiceY][choiceX]=2;
 		}
 		return revealed;
