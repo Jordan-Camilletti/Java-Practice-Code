@@ -1,4 +1,4 @@
-/**/
+/*This is a text version of minesweeper, enter the X and Y coords and wether you want to flag the spot(F) or reveal the spot(R)*/
 
 package main;
 
