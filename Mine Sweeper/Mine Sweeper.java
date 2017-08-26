@@ -6,7 +6,7 @@ package main;
 import java.util.*;
 //import javax.swing.*;
 
-public class Main {
+public class Mine Sweeper{
 	public static int[][] reveal(int[][] field, int[][] revealed, int choiceX, int choiceY, String flag, int xLen, int yLen){//Revealing a spot on the field
 		if(flag.equals(" R")){
 			if(field[choiceY][choiceX]==0&&revealed[choiceY][choiceX]==0){
