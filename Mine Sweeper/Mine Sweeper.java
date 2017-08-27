@@ -38,7 +38,7 @@ public class Main {
 		int[][] revealed=new int[yLen][xLen];//0=not revealed, 1=revealed, 2=flagged
 		String flag="",txt1="";//R=reveal, F=flag
 		JFrame frame=new JFrame("Mine Sweeper");//X
-		frame.setSize(xLen*80, yLen*80);//X
+		//frame.setSize(xLen*80, yLen*80);//X
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//X
 		frame.setVisible(true);//X
 		JLabel txt=new JLabel("");//X
@@ -64,6 +64,7 @@ public class Main {
 			flag=sc.nextLine();
 			revealed=reveal(field,revealed,choiceX,choiceY,flag,xLen,yLen);
 			for(int y=0;y<yLen;y++){
+				txt1=txt1+"<html>";
 				for(int x=0;x<xLen;x++){
 					if(revealed[y][x]==1){
 						if(field[y][x]>9) field[y][x]=9;
@@ -77,10 +78,12 @@ public class Main {
 					}
 				}
 				System.out.print("\n");
-				txt1=txt1+"\n";//X
+				txt1=txt1+"<br/>";//X
 			}
+			txt1=txt1+"</html>";
 			txt.setText(txt1);//X
 			frame.add(txt);//X
+			frame.pack();
 			frame.revalidate();//X
 		}
 	}
