@@ -46,8 +46,8 @@ public class Main {
 			Arrays.fill(field[y], 0);
 		}
 		for(int m=0;m<(xLen+yLen)/2;m++){//Adding mines, 9=mine
-			rndX=rnd.nextInt(12);
-			rndY=rnd.nextInt(12);
+			rndX=rnd.nextInt(xLen-1);
+			rndY=rnd.nextInt(yLen-1);
 			field[rndY][rndX]=9;
 			for(int y=-1;y<=1;y++){
 				for(int x=-1;x<=1;x++){
@@ -57,8 +57,8 @@ public class Main {
 				}
 			}
 		}
-		System.out.print("Enter the x and y coordinates along with R for revealing the spot and F for flagging the spot.");
-		while(field[choiceY][choiceX]!=9||(field[choiceY][choiceX]==9&&revealed[choiceY][choiceX]==0)){//Revealing the field(playing)
+		System.out.print("Enter the x and y coordinates along with R for revealing the spot and F for flagging the spot.\n");
+		while(true){//Revealing the field(playing)
 			choiceX=sc.nextInt()-1;
 			choiceY=sc.nextInt()-1;
 			flag=sc.nextLine();
@@ -83,6 +83,8 @@ public class Main {
 			frame.pack();
 			frame.revalidate();
 			txt1="";
+			if(field[choiceY][choiceX]==9&&revealed[choiceY][choiceX]==1) break;
 		}
+		System.out.print("You lose!");
 	}
 }
