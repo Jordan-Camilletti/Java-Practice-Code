@@ -4,7 +4,7 @@ I might add graphics to this*/
 package main;
 
 import java.util.*;
-//import javax.swing.*;
+import javax.swing.*;
 
 public class Main {
 	public static int[][] reveal(int[][] field, int[][] revealed, int choiceX, int choiceY, String flag, int xLen, int yLen){//Revealing a spot on the field
@@ -36,7 +36,10 @@ public class Main {
 		int choiceX=0,choiceY=0,rndX=0,rndY=0;
 		int[][] field=new int[yLen][xLen];
 		int[][] revealed=new int[yLen][xLen];//0=not revealed, 1=revealed, 2=flagged
-		String flag="";//R=reveal, F=flag
+		String flag="",txt1="";//R=reveal, F=flag
+		JFrame frame=new JFrame("Mine Sweeper");//X
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//X
+		JLabel txt=new JLabel("");//X
 		for(int y=0;y<yLen;y++){//Creating the field
 			Arrays.fill(revealed[y], 0);
 			Arrays.fill(field[y], 0);
@@ -65,16 +68,26 @@ public class Main {
 						System.out.print(field[y][x]);
 					}else if(revealed[y][x]==0){
 						System.out.print("X");
+						txt1=txt1+"X";//X
 					}else{
 						System.out.print("F");
+						txt1=txt1+"F";//X
 					}
 				}
 				System.out.print("\n");
+				txt1=txt1+"\n";//X
 			}
+			txt.setText(txt1);//X
+			frame.add(txt);//X
+			frame.pack();//X
+			frame.setVisible(true);//X
 		}
-		/*JFrame frame=new JFrame("XD");
-		frame.setVisible(true);
+		/*String txt1="ABC";
+		
+		txt.setText(txt1);
+		frame.add(txt);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setSize(650, 650);*/
+		frame.pack();
+		frame.setVisible(true);*/
 	}
 }
