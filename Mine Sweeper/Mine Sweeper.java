@@ -37,11 +37,11 @@ public class Main {
 		int[][] field=new int[yLen][xLen];
 		int[][] revealed=new int[yLen][xLen];//0=not revealed, 1=revealed, 2=flagged
 		String flag="",txt1="";//R=reveal, F=flag
-		JFrame frame=new JFrame("Mine Sweeper");//X
-		//frame.setSize(xLen*80, yLen*80);//X
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//X
-		frame.setVisible(true);//X
-		JLabel txt=new JLabel("");//X
+		JFrame frame=new JFrame("Mine Sweeper");
+		//frame.setSize(xLen*80, yLen*80);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);
+		JLabel txt=new JLabel("");
 		for(int y=0;y<yLen;y++){//Creating the field
 			Arrays.fill(revealed[y], 0);
 			Arrays.fill(field[y], 0);
@@ -64,28 +64,24 @@ public class Main {
 			flag=sc.nextLine();
 			revealed=reveal(field,revealed,choiceX,choiceY,flag,xLen,yLen);
 			for(int y=0;y<yLen;y++){
-				txt1=txt1+"<html>";//X
+				txt1=txt1+"<html>";
 				for(int x=0;x<xLen;x++){
 					if(revealed[y][x]==1){
 						if(field[y][x]>9) field[y][x]=9;
-						System.out.print(field[y][x]);
-						txt1=txt1+field[y][x];//X
+						txt1=txt1+field[y][x];
 					}else if(revealed[y][x]==0){
-						System.out.print("X");
-						txt1=txt1+"X";//X
+						txt1=txt1+"X";
 					}else{
-						System.out.print("F");
-						txt1=txt1+"F";//X
+						txt1=txt1+"F";
 					}
 				}
-				System.out.print("\n");
-				txt1=txt1+"<br/>";//X
+				txt1=txt1+"<br/>";
 			}
-			txt1=txt1+"</html>";//X
-			txt.setText(txt1);//X
-			frame.add(txt);//X
-			frame.pack();//X
-			frame.revalidate();//X
+			txt1=txt1+"</html>";
+			txt.setText(txt1);
+			frame.add(txt);
+			frame.pack();
+			frame.revalidate();
 			txt1="";
 		}
 	}
