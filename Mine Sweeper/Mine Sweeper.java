@@ -57,6 +57,7 @@ public class Main {
 				}
 			}
 		}
+		System.out.print("Enter the x and y coordinates along with R for revealing the spot and F for flagging the spot.");
 		while(field[choiceY][choiceX]!=9||(field[choiceY][choiceX]==9&&revealed[choiceY][choiceX]==0)){//Revealing the field(playing)
 			choiceX=sc.nextInt()-1;
 			choiceY=sc.nextInt()-1;
