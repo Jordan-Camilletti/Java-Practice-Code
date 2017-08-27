@@ -83,12 +83,5 @@ public class Main {
 			frame.add(txt);//X
 			frame.revalidate();//X
 		}
-		/*String txt1="ABC";
-		
-		txt.setText(txt1);
-		frame.add(txt);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.pack();
-		frame.setVisible(true);*/
 	}
 }
