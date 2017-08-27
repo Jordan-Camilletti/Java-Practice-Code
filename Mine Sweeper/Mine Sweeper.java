@@ -31,7 +31,7 @@ public class Main {
 	public static void main(String[] args){
 		Scanner sc=new Scanner(System.in);
 		Random rnd=new Random();
-		System.out.print("Enter x and y lengths for field.");
+		System.out.print("Enter x and y lengths for field.\n");
 		int xLen=sc.nextInt(), yLen=sc.nextInt();
 		int choiceX=0,choiceY=0,rndX=0,rndY=0;
 		int[][] field=new int[yLen][xLen];
