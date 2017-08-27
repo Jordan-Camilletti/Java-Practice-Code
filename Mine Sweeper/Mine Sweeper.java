@@ -64,11 +64,12 @@ public class Main {
 			flag=sc.nextLine();
 			revealed=reveal(field,revealed,choiceX,choiceY,flag,xLen,yLen);
 			for(int y=0;y<yLen;y++){
-				txt1=txt1+"<html>";
+				txt1=txt1+"<html>";//X
 				for(int x=0;x<xLen;x++){
 					if(revealed[y][x]==1){
 						if(field[y][x]>9) field[y][x]=9;
 						System.out.print(field[y][x]);
+						txt1=txt1+field[y][x];//X
 					}else if(revealed[y][x]==0){
 						System.out.print("X");
 						txt1=txt1+"X";//X
@@ -80,11 +81,12 @@ public class Main {
 				System.out.print("\n");
 				txt1=txt1+"<br/>";//X
 			}
-			txt1=txt1+"</html>";
+			txt1=txt1+"</html>";//X
 			txt.setText(txt1);//X
 			frame.add(txt);//X
-			frame.pack();
+			frame.pack();//X
 			frame.revalidate();//X
+			txt1="";
 		}
 	}
 }
