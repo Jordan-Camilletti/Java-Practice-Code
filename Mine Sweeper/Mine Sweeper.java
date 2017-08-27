@@ -54,6 +54,10 @@ public class Main {
 			}
 		}
 		while(field[choiceY][choiceX]!=9||(field[choiceY][choiceX]==9&&revealed[choiceY][choiceX]==0)){
+			choiceX=sc.nextInt()-1;
+			choiceY=sc.nextInt()-1;
+			flag=sc.nextLine();
+			revealed=reveal(field,revealed,choiceX,choiceY,flag,xLen,yLen);
 			for(int y=0;y<yLen;y++){
 				for(int x=0;x<xLen;x++){
 					if(revealed[y][x]==1){
@@ -67,10 +71,6 @@ public class Main {
 				}
 				System.out.print("\n");
 			}
-			choiceX=sc.nextInt()-1;
-			choiceY=sc.nextInt()-1;
-			flag=sc.nextLine();
-			revealed=reveal(field,revealed,choiceX,choiceY,flag,xLen,yLen);
 		}
 		/*JFrame frame=new JFrame("XD");
 		frame.setVisible(true);
