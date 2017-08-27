@@ -38,7 +38,6 @@ public class Main {
 		int[][] revealed=new int[yLen][xLen];//0=not revealed, 1=revealed, 2=flagged
 		String flag="",txt1="";//R=reveal, F=flag
 		JFrame frame=new JFrame("Mine Sweeper");
-		//frame.setSize(xLen*80, yLen*80);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 		JLabel txt=new JLabel("");
@@ -58,7 +57,7 @@ public class Main {
 				}
 			}
 		}
-		while(field[choiceY][choiceX]!=9||(field[choiceY][choiceX]==9&&revealed[choiceY][choiceX]==0)){
+		while(field[choiceY][choiceX]!=9||(field[choiceY][choiceX]==9&&revealed[choiceY][choiceX]==0)){//Revealing the field(playing)
 			choiceX=sc.nextInt()-1;
 			choiceY=sc.nextInt()-1;
 			flag=sc.nextLine();
@@ -77,7 +76,7 @@ public class Main {
 				}
 				txt1=txt1+"<br/>";
 			}
-			txt1=txt1+"</html>";
+			txt1=txt1+"</html>";//Displaying the field in a window
 			txt.setText(txt1);
 			frame.add(txt);
 			frame.pack();
