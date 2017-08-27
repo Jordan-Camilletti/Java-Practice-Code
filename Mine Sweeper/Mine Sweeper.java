@@ -38,7 +38,9 @@ public class Main {
 		int[][] revealed=new int[yLen][xLen];//0=not revealed, 1=revealed, 2=flagged
 		String flag="",txt1="";//R=reveal, F=flag
 		JFrame frame=new JFrame("Mine Sweeper");//X
+		frame.setSize(xLen*80, yLen*80);//X
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//X
+		frame.setVisible(true);//X
 		JLabel txt=new JLabel("");//X
 		for(int y=0;y<yLen;y++){//Creating the field
 			Arrays.fill(revealed[y], 0);
@@ -79,8 +81,7 @@ public class Main {
 			}
 			txt.setText(txt1);//X
 			frame.add(txt);//X
-			frame.pack();//X
-			frame.setVisible(true);//X
+			frame.revalidate();//X
 		}
 		/*String txt1="ABC";
 		
