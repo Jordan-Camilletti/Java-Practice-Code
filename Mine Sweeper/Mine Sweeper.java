@@ -32,8 +32,7 @@ public class Main {
 		Scanner sc=new Scanner(System.in);
 		Random rnd=new Random();
 		System.out.print("Enter x and y lengths for field.");
-		int xLen=sc.nextInt();
-		int yLen=sc.nextInt();
+		int xLen=sc.nextInt(), yLen=sc.nextInt();
 		int choiceX=0,choiceY=0,rndX=0,rndY=0;
 		int[][] field=new int[yLen][xLen];
 		int[][] revealed=new int[yLen][xLen];//0=not revealed, 1=revealed, 2=flagged
