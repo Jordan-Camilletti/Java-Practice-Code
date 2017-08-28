@@ -16,10 +16,12 @@ public class MineSweeper {
 			if(field[choiceY][choiceX]==0&&revealed[choiceY][choiceX]==0){
 				for(int y=-1;y<=1;y++){
 					for(int x=-1;x<=1;x++){
-						if((x==)&&(y==)){
+						if(x!=0&&y!=0){
 							try{
-								revealed[choiceY+y][choiceX+x]=1;
-                                                                revealed=reveal(field,revealed,choiceX+x,choiceY+y,flag,xLen,yLen);
+                                                            System.out.print("choiceX:"+choiceX+" x:"+x+" choiceY:"+choiceY+" y:"+y+"\n");
+                                                            
+                                                            if(revealed[choiceX+x][choiceY+y]==0) revealed=reveal(field,revealed,choiceX+x,choiceY+y,flag,xLen,yLen);
+                                                            revealed[choiceY][choiceX]=1;
                                                         }catch(java.lang.ArrayIndexOutOfBoundsException e){}
 						}
 					}
