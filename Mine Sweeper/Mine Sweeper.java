@@ -45,7 +45,7 @@ public class MineSweeper {
 			Arrays.fill(revealed[y], 0);
 			Arrays.fill(field[y], 0);
 		}
-		for(int m=0;m<1/*(xLen+yLen)/2*/;m++){//Adding mines, 9=mine
+		for(int m=0;m<(xLen+yLen)/2;m++){//Adding mines, 9=mine
 			rndX=rnd.nextInt(xLen-1);
 			rndY=rnd.nextInt(yLen-1);
 			field[rndY][rndX]=9;
