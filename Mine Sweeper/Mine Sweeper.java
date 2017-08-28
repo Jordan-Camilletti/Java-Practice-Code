@@ -1,12 +1,12 @@
 /*This is a text version of minesweeper, enter the X and Y coords and wether you want to flag the spot(F) or reveal the spot(R)
 I might add graphics to this*/
 
-package main;
+package mine.sweeper;
 
 import java.util.*;
 import javax.swing.*;
 
-public class Main {
+public class MineSweeper {
 	public static int[][] reveal(int[][] field, int[][] revealed, int choiceX, int choiceY, String flag, int xLen, int yLen){//Revealing a spot on the field
 		if(flag.equals(" R")){
 			if(field[choiceY][choiceX]==0&&revealed[choiceY][choiceX]==0){
