@@ -7,21 +7,14 @@ import java.util.*;
 import javax.swing.*;
 
 public class MineSweeper {
-        /*public static int[][] revealZero(int[][] field, int[][] revealed){
-            
-            return revealed;
-        }*/
 	public static int[][] reveal(int[][] field, int[][] revealed, int choiceX, int choiceY, String flag, int xLen, int yLen){//Revealing a spot on the field
 		if(flag.equals(" R")){
-			if(field[choiceY][choiceX]==0&&revealed[choiceY][choiceX]==0){
+			if((field[choiceY][choiceX]==0&&revealed[choiceY][choiceX]==0)){
 				for(int y=-1;y<=1;y++){
 					for(int x=-1;x<=1;x++){
-						if(x!=0&&y!=0){
+						if(x!=0||y!=0){
 							try{
-                                                            System.out.print("choiceX:"+choiceX+" x:"+x+" choiceY:"+choiceY+" y:"+y+"\n");
-                                                            
-                                                            if(revealed[choiceX+x][choiceY+y]==0) revealed=reveal(field,revealed,choiceX+x,choiceY+y,flag,xLen,yLen);
-                                                            revealed[choiceY][choiceX]=1;
+                                                            revealed[choiceY+y][choiceX+x]=1;
                                                         }catch(java.lang.ArrayIndexOutOfBoundsException e){}
 						}
 					}
