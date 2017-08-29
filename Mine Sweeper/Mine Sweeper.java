@@ -32,10 +32,10 @@ public class MineSweeper {
 		Random rnd=new Random();
 		System.out.print("Enter x and y lengths for field.\n");
 		int xLen=sc.nextInt(), yLen=sc.nextInt();
-		int choiceX=0,choiceY=0,rndX=0,rndY=0;
+		int choiceX,choiceY,rndX,rndY;
 		int[][] field=new int[yLen][xLen];
 		int[][] revealed=new int[yLen][xLen];//0=not revealed, 1=revealed, 2=flagged
-		String flag="",txt1="";//R=reveal, F=flag
+		String flag,txt1="";//R=reveal, F=flag
 		JFrame frame=new JFrame("Mine Sweeper");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
