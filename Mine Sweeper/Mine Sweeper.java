@@ -24,6 +24,8 @@ public class Main{
 			revealed[choiceY][choiceX]=1;
 		}else if(flag.equals(" F")){
 			revealed[choiceY][choiceX]=2;
+		}else{
+			revealed[choiceY][choiceX]=3;
 		}
 		return revealed;
 	}
@@ -35,7 +37,7 @@ public class Main{
 		int xLen=sc.nextInt(), yLen=sc.nextInt();
 		int choiceX=0,choiceY=0,rndX=0,rndY=0;
 		int[][] field=new int[yLen][xLen];
-		int[][] revealed=new int[yLen][xLen];//0=not revealed, 1=revealed, 2=flagged
+		int[][] revealed=new int[yLen][xLen];//0=not revealed, 1=revealed, 2=flagged, 3=selected
 		String flag="",txt1="";//R=reveal, F=flag
 		JFrame frame=new JFrame("Mine Sweeper");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -71,8 +73,10 @@ public class Main{
 						txt1=txt1+field[y][x];
 					}else if(revealed[y][x]==0){
 						txt1=txt1+"X";
-					}else{
+					}else if(revealed[y][x]==2){
 						txt1=txt1+"F";
+					}else{
+						txt1=txt1+"S";
 					}
 				}
 				txt1=txt1+"<br/>";
