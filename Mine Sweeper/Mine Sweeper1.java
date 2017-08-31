@@ -3,11 +3,8 @@ I might add graphics to this*/
 
 package main;
 
-import java.util.Arrays;
-import java.util.Random;
-import java.util.Scanner;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
+import java.util.*;
+import javax.swing.*;
 
 public class Main{
 	public static int[][] reveal(int[][] field, int[][] revealed, int choiceX, int choiceY, String flag, int xLen, int yLen){//Revealing a spot on the field
