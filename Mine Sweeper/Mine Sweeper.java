@@ -5,8 +5,10 @@ package mine.sweeper;
 
 import java.util.*;
 import javax.swing.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
-public class MineSweeper {
+public class MineSweeper extends JPanel{
 	public static int[][] reveal(int[][] field, int[][] revealed, int choiceX, int choiceY, String flag, int xLen, int yLen){//Revealing a spot on the field
 		if(flag.equals(" R")){
 			if((field[choiceY][choiceX]==0&&revealed[choiceY][choiceX]==0)){
@@ -27,19 +29,27 @@ public class MineSweeper {
 		return revealed;
 	}
 	
+        public MineSweeper(){
+                addMouseListener(new MouseAdapter() { 
+                        public void mousePressed(MouseEvent me) { 
+                                System.out.println(me); 
+                        } 
+                }); 
+        }
+        
 	public static void main(String[] args){
 		Scanner sc=new Scanner(System.in);
 		Random rnd=new Random();
 		System.out.print("Enter x and y lengths for field.\n");
 		int xLen=sc.nextInt(), yLen=sc.nextInt();
-		int choiceX,choiceY,rndX,rndY;
+		int choiceX=0,choiceY=0,rndX=0,rndY=0;
 		int[][] field=new int[yLen][xLen];
 		int[][] revealed=new int[yLen][xLen];//0=not revealed, 1=revealed, 2=flagged
-		String flag,txt1="";//R=reveal, F=flag
+		String flag="",txt1="";//R=reveal, F=flag
 		JFrame frame=new JFrame("Mine Sweeper");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
-		JLabel txt=new JLabel("");
+                JLabel txt=new JLabel("");
 		for(int y=0;y<yLen;y++){//Creating the field
 			Arrays.fill(revealed[y], 0);
 			Arrays.fill(field[y], 0);
