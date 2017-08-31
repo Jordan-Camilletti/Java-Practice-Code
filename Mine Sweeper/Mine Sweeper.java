@@ -1,4 +1,4 @@
-/*This is a text version of minesweeper, enter the X and Y coords and wether you want to flag the spot(F) or reveal the spot(R)
+/*This is a text version of minesweeper, enter the X and Y coords and wether you want to flag the spot(F), reveal the spot(R), not select the spot(anything else).
 I might add graphics to this*/
 
 package main;
@@ -59,7 +59,7 @@ public class Main{
 				}
 			}
 		}
-		System.out.print("Enter the x and y coordinates along with R for revealing the spot and F for flagging the spot.\n");
+		System.out.print("Enter the x and y coordinates along with R for revealing the spot and F for flagging the spot, or enter nothing to select the spot.\n");
 		while(true){//Revealing the field(playing)
 			choiceX=sc.nextInt()-1;
 			choiceY=sc.nextInt()-1;
