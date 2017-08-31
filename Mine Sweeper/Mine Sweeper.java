@@ -1,21 +1,22 @@
 /*This is a text version of minesweeper, enter the X and Y coords and wether you want to flag the spot(F) or reveal the spot(R)
 I might add graphics to this*/
 
-package mine.sweeper;
+package main;
 
 import java.util.*;
-import javax.swing.*;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
 
-public class MineSweeper extends JPanel{
+public class Main{
 	public static int[][] reveal(int[][] field, int[][] revealed, int choiceX, int choiceY, String flag, int xLen, int yLen){//Revealing a spot on the field
 		if(flag.equals(" R")){
-			if((field[choiceY][choiceX]==0&&revealed[choiceY][choiceX]==0)){
+			if(field[choiceY][choiceX]==0&&revealed[choiceY][choiceX]==0){
 				for(int y=-1;y<=1;y++){
 					for(int x=-1;x<=1;x++){
 						if(x!=0||y!=0){
 							try{
-                                                            revealed[choiceY+y][choiceX+x]=1;
-                                                        }catch(java.lang.ArrayIndexOutOfBoundsException e){}
+								revealed[choiceY+y][choiceX+x]=1;
+							}catch(java.lang.ArrayIndexOutOfBoundsException e){}		
 						}
 					}
 				}
@@ -26,7 +27,7 @@ public class MineSweeper extends JPanel{
 		}
 		return revealed;
 	}
-        
+	
 	public static void main(String[] args){
 		Scanner sc=new Scanner(System.in);
 		Random rnd=new Random();
@@ -39,7 +40,7 @@ public class MineSweeper extends JPanel{
 		JFrame frame=new JFrame("Mine Sweeper");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
-                JLabel txt=new JLabel("");
+		JLabel txt=new JLabel("");
 		for(int y=0;y<yLen;y++){//Creating the field
 			Arrays.fill(revealed[y], 0);
 			Arrays.fill(field[y], 0);
