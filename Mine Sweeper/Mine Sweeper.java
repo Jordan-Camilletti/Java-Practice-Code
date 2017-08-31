@@ -28,14 +28,6 @@ public class MineSweeper extends JPanel{
 		}
 		return revealed;
 	}
-	
-        public MineSweeper(){
-                addMouseListener(new MouseAdapter() { 
-                        public void mousePressed(MouseEvent me) { 
-                                System.out.println(me); 
-                        } 
-                }); 
-        }
         
 	public static void main(String[] args){
 		Scanner sc=new Scanner(System.in);
