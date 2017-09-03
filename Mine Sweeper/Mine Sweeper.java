@@ -1,5 +1,5 @@
 /*This is a text version of minesweeper, enter the X and Y coords and wether you want to flag the spot(F), reveal the spot(R), not select the spot(anything else).
-I might add graphics to this*/
+Created by Jordan Camilletti*/
 
 package main;
 
