@@ -3,6 +3,7 @@ Created by Jordan Camilletti*/
 
 package main;
 
+import java.awt.Color;
 import java.util.*;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -72,11 +73,11 @@ public class Main{
 						if(field[y][x]>9) field[y][x]=9;
 						txt1=txt1+field[y][x];
 					}else if(revealed[y][x]==0){
-						txt1=txt1+"X";
+						txt1=txt1+"<font color='black'>X</font>";
 					}else if(revealed[y][x]==2){
-						txt1=txt1+"F";
+						txt1=txt1+"<font color='red'>F</font>";
 					}else{
-						txt1=txt1+"S";
+						txt1=txt1+"<font color='green'>S</font>";
 					}
 				}
 				txt1=txt1+"<br/>";
