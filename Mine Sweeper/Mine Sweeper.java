@@ -11,14 +11,7 @@ public class MineSweeper{
 	public static int[][] reveal(int[][] field, int[][] revealed, int choiceX, int choiceY, String flag, int xLen, int yLen){//Revealing a spot on the field
 		if(flag.equals(" R")){
 			if(field[choiceY][choiceX]==0&&(revealed[choiceY][choiceX]==0||revealed[choiceY][choiceX]==3)){
-				for(int n=choiceX;n<xLen;n++){
-                                    if(field[choiceY][n]!=0||revealed[choiceY][n]==1||revealed[choiceY][n]==2){
-                                        break;
-                                    }else{
-                                        revealed[choiceY][n]=1;
-                                    }
-                                }
-                                for(int y=-1;y<=1;y++){
+				for(int y=-1;y<=1;y++){
 					for(int x=-1;x<=1;x++){
 						if(x!=0||y!=0){
 							try{
@@ -54,7 +47,7 @@ public class MineSweeper{
 			Arrays.fill(revealed[y], 0);
 			Arrays.fill(field[y], 0);
 		}
-		for(int m=0;m<(xLen+yLen)/2;m++){//Adding mines, 9=mine
+		for(int m=0;m</*(xLen+yLen)/2*/1;m++){//Adding mines, 9=mine
 			rndX=rnd.nextInt(xLen-1);
 			rndY=rnd.nextInt(yLen-1);
 			field[rndY][rndX]=9;
