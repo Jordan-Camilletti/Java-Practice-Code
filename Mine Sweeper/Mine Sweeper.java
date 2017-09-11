@@ -8,6 +8,10 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 public class MineSweeper{
+        public static int[][] revealZero(int[][] field, int[][] revealed, int choiceX, int choiceY){
+            return field;
+        }
+        
 	public static int[][] reveal(int[][] field, int[][] revealed, int choiceX, int choiceY, String flag){//Revealing a spot on the field
 		if(flag.equals(" R")){
 			if(field[choiceY][choiceX]==0&&(revealed[choiceY][choiceX]==0||revealed[choiceY][choiceX]==3)){
