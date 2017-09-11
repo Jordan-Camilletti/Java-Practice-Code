@@ -8,10 +8,26 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 public class MineSweeper{
-        public static int[][] revealZero(int[][] field, int[][] revealed, int choiceX, int choiceY){
-            return field;
+        public static int[][] revealZero(int[][] field, int[][] revealed, int xLen, int yLen){
+                for(int yRow=0;yRow<yLen;yRow++){
+                        for(int xRow=0;xRow<xLen;xRow++){
+                                if(field[yRow][xRow]==0 && revealed[yRow][xRow]==1){
+                                        for(int y=-1;y<=1;y++){
+                                                for(int x=-1;x<=1;x++){
+                                                        if(x!=0||y!=0){
+                                                                try{
+                                                                	revealed[yRow+y][xRow+x]=1;
+                                                                }catch(java.lang.ArrayIndexOutOfBoundsException e){}		
+                                                        }
+                                                }
+                                        }
+                                        revealed=revealZero(field,revealed,xLen,yLen);
+                                }
+                        }
+                }
+                return revealed;
         }
-        
+    
 	public static int[][] reveal(int[][] field, int[][] revealed, int choiceX, int choiceY, String flag){//Revealing a spot on the field
 		if(flag.equals(" R")){
 			if(field[choiceY][choiceX]==0&&(revealed[choiceY][choiceX]==0||revealed[choiceY][choiceX]==3)){
@@ -69,6 +85,7 @@ public class MineSweeper{
 			choiceY=sc.nextInt()-1;
 			flag=sc.nextLine();
 			revealed=reveal(field,revealed,choiceX,choiceY,flag);
+                        revealed=revealZero(field,revealed,xLen,yLen);
 			for(int y=0;y<yLen;y++){
 				txt1=txt1+"<html>";
 				for(int x=0;x<xLen;x++){
