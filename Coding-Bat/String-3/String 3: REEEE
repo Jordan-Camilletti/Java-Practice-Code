@@ -1,15 +1,20 @@
 /**/
 
 public String notReplace(String str) {
-  if(){
-    
+  String newStr="";
+  if(str.length()<=2){
+    if(str.equals("is")) return("is not");
+    return(str);
   }
-  for(){
+  if((str.substring(0,3)).equals("is ")){
+    str=str.substring(0,3)+"not "+str.substring(3,str.length());
+  }
+  /*for(){
     if(){
       
     }
   }
   if(){
-  }
-  return
+  }*/
+  return(str);
 }
