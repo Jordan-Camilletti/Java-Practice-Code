@@ -7,10 +7,10 @@ public String notReplace(String str) {
     if(str.equals("is")) return("is not");
     return(str);
   }
-  if((str.substring(0,3)).equals("is ")||(str.substring(0,3)).equals("is-")){
+  if((str.substring(0,2)).equals("is") && Character.isLetter(str.substring(2,3))){
     newStr=newStr.substring(0,2)+" not"+newStr.substring(2,newStr.length());
   }
-  if((str.substring(str.length()-3,str.length())).equals(" is")||(str.substring(str.length()-3,str.length())).equals("-is")){
+  if((str.substring(str.length()-2,str.length())).equals("is") && Character.isLetter(str.substring(str.length()-3,str.length()-2))){
     newStr+=" not";
   }
   return(newStr);
