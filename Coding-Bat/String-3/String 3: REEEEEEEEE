@@ -1,6 +1,10 @@
 /**/
 
 public String notReplace(String str){
+  if(str.length()<=2){
+    if(str.equals("is")) return("is not");
+    return(str);
+  }
   if((str.substring(0,2)).equals("is") && !Character.isLetter(str.toCharArray()[2])){
     str=str.substring(0,2)+" not"+str.substring(2,str.length());
   }
