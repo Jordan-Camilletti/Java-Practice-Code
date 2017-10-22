@@ -9,11 +9,11 @@ public String notReplace(String str) {
   if((str.substring(0,3)).equals("is ")){
     str=str.substring(0,3)+"not "+str.substring(3,str.length());
   }
-  /*for(){
-    if(){
-      
+  for(int c=0;c<str.length()-3;c++){
+    if((str.substring(c,c+4)).equals(" is ")){
+      str=str.substring(0,c)+" not "+str.substring(c,str.length());
     }
-  }*/
+  }
   if((str.substring(str.length()-3,str.length())).equals(" is")){
     str=str+" not";
   }
