@@ -15,7 +15,7 @@ public String notReplace(String str){
   for(int c=1;c<str.length()-2;c++){
     if((str.substring(c,c+2)).equals("is")){
       if(!Character.isLetter(str.toCharArray()[c-1]) && !Character.isLetter(str.toCharArray()[c+2])){
-        newStr=str.substring(0,c-2)+" not "+str.substring(c+2,str.length());
+        newStr=str.substring(0,c+2)+" not"+str.substring(c+2,str.length());
       }
     }
   }
