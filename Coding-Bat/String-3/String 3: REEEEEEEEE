@@ -7,5 +7,11 @@ public String notReplace(String str) {
     if(str.equals("is")) return("is not");
     return(str);
   }
+  if((str.substring(0,3)).equals("is ")||(str.substring(0,3)).equals("is-")){
+    newStr=newStr.substring(0,3)+"not "+newStr.substring(3,newStr.length());
+  }
+  if((str.substring(str.length()-3,str.length())).equals(" is")||(str.substring(str.length()-3,str.length())).equals("-is")){
+    
+  } 
   return(newStr);
 }
