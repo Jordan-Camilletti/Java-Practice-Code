@@ -13,8 +13,9 @@ public String notReplace(String str) {
     if(){
       
     }
-  }
-  if(){
   }*/
+  if((str.substring(str.length()-3,str.length())).equals(" is")){
+    str=str+" not";
+  }
   return(str);
 }
