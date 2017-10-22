@@ -6,18 +6,18 @@ public String notReplace(String str){
     if(str.equals("is")) return("is not");
     return(str);
   }
-  if((str.substring(0,2)).equals("is") && !Character.isLetter(str.toCharArray()[2])){
-    newStr=str.substring(0,2)+" not"+str.substring(2,str.length());
-  }
-  if((str.substring(str.length()-2,str.length())).equals("is") && !Character.isLetter(str.toCharArray()[str.length()-3])){
-    newStr+=" not";
-  }
   for(int c=1;c<str.length()-2;c++){
     if((str.substring(c,c+2)).equals("is")){
       if(!Character.isLetter(str.toCharArray()[c-1]) && !Character.isLetter(str.toCharArray()[c+2])){
         newStr=str.substring(0,c+2)+" not"+str.substring(c+2,str.length());
       }
     }
+  }
+  if((str.substring(0,2)).equals("is") && !Character.isLetter(str.toCharArray()[2])){
+    newStr=str.substring(0,2)+" not"+str.substring(2,str.length());
+  }
+  if((str.substring(str.length()-2,str.length())).equals("is") && !Character.isLetter(str.toCharArray()[str.length()-3])){
+    newStr+=" not";
   }
   return(newStr);
 }
