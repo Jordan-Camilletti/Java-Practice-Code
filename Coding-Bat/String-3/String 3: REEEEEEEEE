@@ -1,17 +1,11 @@
 /**/
 
 public String notReplace(String str) {
-  String[] newArr=str.split(" is ");
-  String newStr=String.join(" is not ",newArr);
-  if(str.length()<=2){
-    if(str.equals("is")) return("is not");
-    return(str);
-  }
   if((str.substring(0,2)).equals("is") && Character.isLetter(str.substring(2,3))){
-    newStr=newStr.substring(0,2)+" not"+newStr.substring(2,newStr.length());
+    str=str.substring(0,2)+" not"+str.substring(2,str.length());
   }
   if((str.substring(str.length()-2,str.length())).equals("is") && Character.isLetter(str.substring(str.length()-3,str.length()-2))){
-    newStr+=" not";
+    str+=" not";
   }
-  return(newStr);
+  return(str);
 }
