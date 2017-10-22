@@ -1,10 +1,10 @@
 /**/
 
-public String notReplace(String str) {
-  if((str.substring(0,2)).equals("is") && Character.isLetter(str.substring(2,3))){
+public String notReplace(String str){
+  if((str.substring(0,2)).equals("is") && !Character.isLetter(str.toCharArray()[2])){
     str=str.substring(0,2)+" not"+str.substring(2,str.length());
   }
-  if((str.substring(str.length()-2,str.length())).equals("is") && Character.isLetter(str.substring(str.length()-3,str.length()-2))){
+  if((str.substring(str.length()-2,str.length())).equals("is") && !Character.isLetter(str.toCharArray()[str.length()-3])){
     str+=" not";
   }
   return(str);
