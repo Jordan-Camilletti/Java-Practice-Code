@@ -8,5 +8,6 @@ public int maxSpan(int[] nums){
   for(int n=nums.length-1;n>=0;n--){
     if(nums[n]==nums[nums.length-1]) leftMost=n;
   }
+  leftMost=nums.length-leftMost;
   return((leftMost>rightMost) ? leftMost:rightMost);
 }
