@@ -3,7 +3,7 @@
 public int maxSpan(int[] nums){
   int tot=0,leftMost=0,rightMost=0;
   for(int n=0;n<nums.length;n++){
-    if(nums[n]==nums[0]) rightMost=n;
+    if(nums[n]==nums[0]) rightMost=n+1;
   }
   for(int n=nums.length-1;n>=0;n--){
     if(nums[n]==nums[nums.length-1]) leftMost=n;
