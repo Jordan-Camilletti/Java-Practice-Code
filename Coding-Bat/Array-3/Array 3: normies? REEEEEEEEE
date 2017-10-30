@@ -1,1 +1,11 @@
 /**/
+
+public int maxSpan(int[] nums){
+  int tot=0,leftMost=0,rightMost=0;
+  for(int n=0;n<nums.length;n++){
+    
+  }
+  for(int n=nums.length-1;n>=0;n--){
+    
+  }
+}
