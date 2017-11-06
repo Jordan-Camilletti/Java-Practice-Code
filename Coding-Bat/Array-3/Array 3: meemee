@@ -1,10 +1,11 @@
 /**/
 
-public int[] fix34(int[] nums){
+public int[] fix34(int[] nums) {
   for(int n=0;n<nums.length;n++){
-    if(nums[n]==3){
-    }else if(nums[n]==4){
+    if(nums[n]==3 && nums[n+1]!=4){
+      for(){
+        
+      }
     }
   }
-  return(Nums);
 }
