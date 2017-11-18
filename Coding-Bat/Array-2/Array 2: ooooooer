@@ -5,6 +5,6 @@ public int[] shiftLeft(int[] nums) {
   for(int x=1;x<nums.length;x++){
     newArr[x-1]=nums[x];
   }
-  newArr[nums.length]=nums[0];
+  newArr[nums.length-1]=nums[0];
   return(newArr);
 }
