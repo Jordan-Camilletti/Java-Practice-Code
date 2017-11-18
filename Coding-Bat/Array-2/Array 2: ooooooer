@@ -6,4 +6,5 @@ public int[] shiftLeft(int[] nums) {
     newArr[x-1]=nums[x];
   }
   newArr[nums.length]=nums[0];
+  return(newArr);
 }
