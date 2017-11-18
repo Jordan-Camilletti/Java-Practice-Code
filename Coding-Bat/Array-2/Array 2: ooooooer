@@ -1,6 +1,7 @@
 /**/
 
 public int[] shiftLeft(int[] nums) {
+  if(nums.length==0) return(nums);
   int[] newArr=new int[nums.length];
   for(int x=1;x<nums.length;x++){
     newArr[x-1]=nums[x];
