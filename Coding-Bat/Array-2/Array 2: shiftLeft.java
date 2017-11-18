@@ -1,4 +1,4 @@
-/**/
+/*Return an array that is "left shifted" by one -- so {6, 2, 5, 3} returns {2, 5, 3, 6}. */
 
 public int[] shiftLeft(int[] nums) {
   if(nums.length==0) return(nums);
