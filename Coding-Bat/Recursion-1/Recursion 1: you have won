@@ -1,1 +1,11 @@
 /**/
+
+public int countPairs(String str) {
+  if(str.length()<3){
+    return(0);
+  }else if(str.length()==3){
+    
+  }else{
+    
+  }
+}
