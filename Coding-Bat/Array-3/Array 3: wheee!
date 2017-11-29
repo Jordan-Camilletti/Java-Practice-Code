@@ -1,5 +1,13 @@
 /**/
 
+public boolean isIn(int[] nums, int startPos, int subLen){
+  int[] slice=new int[subLen+1];
+  for(int n=startPos;n<startPos+subLen;n++){
+    slice[n-startPos]=nums[n];
+  }
+  slice.reverse();
+}
+
 public int maxMirror(int[] nums){
   int longest=0 ,length=0;
   int[] section;
