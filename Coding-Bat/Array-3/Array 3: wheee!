@@ -1,10 +1,12 @@
 /**/
 
 public int maxMirror(int[] nums){
-  int longest=0,length=0;
+  int longest=0 ,length=0;
+  int[] section;
   for(int startPos=0;startPos<nums.length-1;startPos++){
     for(int subLen=1;subLen<nums.length-startPos;subLen++){
-      
+      section=Arrays.copyOfRange(nums, startPos, startPos+subLen);
     }
   }
+  return(0);
 }
