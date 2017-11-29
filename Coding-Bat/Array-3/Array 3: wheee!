@@ -5,7 +5,10 @@ public int maxMirror(int[] nums){
   int[] section;
   for(int startPos=0;startPos<nums.length-1;startPos++){
     for(int subLen=1;subLen<nums.length-startPos;subLen++){
-      section=Arrays.copyOfRange(nums, startPos, startPos+subLen);
+      /*section=Arrays.copyOfRange(nums, startPos, startPos+subLen);
+      if(Arrays.asList(nums).contains(section) && subLen>longest){
+        longest=subLen;
+      }*/
     }
   }
   return(0);
