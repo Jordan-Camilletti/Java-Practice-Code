@@ -3,7 +3,7 @@
 public boolean isIn(int[] nums, int startPos, int subLen){
   int[] slice=new int[subLen+1];
   for(int n=startPos;n<startPos+subLen+1;n++){
-    slice[subLen-n]=nums[n];
+    slice[subLen-(n-startPos)]=nums[n];
   }
   return(Arrays.asList(nums).contains(slice));
 }
