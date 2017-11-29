@@ -9,8 +9,7 @@ public boolean isIn(int[] nums, int startPos, int subLen){
 }
 
 public int maxMirror(int[] nums){
-  int longest=0 ,length=0;
-  int[] section;
+  int longest=0;
   for(int startPos=0;startPos<nums.length;startPos++){
     for(int subLen=0;subLen<nums.length-startPos;subLen++){
       if(isIn(nums,startPos,subLen) && subLen>longest){
