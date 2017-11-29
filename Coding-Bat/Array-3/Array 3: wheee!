@@ -1,5 +1,10 @@
 /**/
 
-public int maxMirror(int[] nums) {
-  
+public int maxMirror(int[] nums){
+  int longest=0,length=0;
+  for(int startPos=0;startPos<nums.length-1;startPos++){
+    for(int subLen=1;subLen<nums.length-startPos;subLen++){
+      
+    }
+  }
 }
