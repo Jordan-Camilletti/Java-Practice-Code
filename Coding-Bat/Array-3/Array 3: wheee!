@@ -6,11 +6,11 @@ public boolean isIn(int[] nums, int startPos, int subLen){
   for(int n=startPos;n<startPos+subLen+1;n++){
     slice[subLen-(n-startPos)]=nums[n];
   }
-  for(int n=0;n<nums.length;n++){
-    if(nums[n]==slice[slice.length-1]){
+  for(int n=0;n<=nums.length-slice.length;n++){
+    if(nums[n]==slice[0]){
       inArray=true;
       for(int n2=0;n2<slice.length;n2++){
-        if(slice[]!=numsp[]) inArray=false;
+        if(slice[n2]!=nums[n2+n]) inArray=false;
       }
       if(inArray) return(true);
     }
@@ -22,10 +22,10 @@ public int maxMirror(int[] nums){
   int longest=0;
   for(int startPos=0;startPos<nums.length;startPos++){
     for(int subLen=0;subLen<nums.length-startPos;subLen++){
-      if(isIn(nums,startPos,subLen) && subLen>longest){
+      if(/*isIn(nums,startPos,subLen) && */subLen>longest){
         longest=subLen;
       }
     }
   }
-  return(longest);
+  return(longest+1);
 }
