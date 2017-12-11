@@ -6,19 +6,24 @@ public class SyntheticDivision {
 		String[] dividend=(equation.split("/")[0]).split("x\\^");
 		String[] divisor=(equation.split("/")[1]).split("x");
 		int x=(Integer.parseInt(divisor[1])*-1)/Integer.parseInt(divisor[0]);
+                int topPower=Integer.parseInt(dividend[1].split("\\+")[0])-1;
                 int[] coefficients=new int[dividend.length-1];
                 coefficients[0]=Integer.parseInt(dividend[0]);
                 for(int n=1;n<dividend.length-1;n++){
                     coefficients[n]=Integer.parseInt(dividend[n].split("\\+")[1]);
                 }
-                for(int n=0;n<coefficients.length;n++){
+                /*for(int n=0;n<coefficients.length;n++){
                     System.out.println(coefficients[n]);
                 }
-                System.out.println(x+"\n");
-                System.out.println(coefficients[0]);
+                System.out.println(x+"\n");*/
+                System.out.println(coefficients[0]+"x^"+topPower); 
                 for(int n=1;n<coefficients.length;n++){
                     coefficients[n]+=(coefficients[n-1]*x);
-                    System.out.println(coefficients[n]);
+                    if(topPower-n<0){
+                        System.out.println(coefficients[n]+"/"+(equation.split("/")[1]));
+                    }else{
+                        System.out.println(coefficients[n]+"x^"+(topPower-n));
+                    }
                 }
         }
 }
