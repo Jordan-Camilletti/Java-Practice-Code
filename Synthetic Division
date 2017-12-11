@@ -6,7 +6,9 @@ public class SyntheticDivision {
 		String dividend=equation.split("/")[0];
 		String[] divisor=(equation.split("/")[1]).split("x\\+");
 		int x=(Integer.parseInt(divisor[1])*-1)/Integer.parseInt(divisor[0]);
-                System.out.print(x);
-                
+                int[] coefficients=new int[(dividend.split("x\\^")).length-1];
+                coefficients[0]=Integer.parseInt(dividend.split("x\\^")[0]);
+                //System.out.println(coefficients.length);
+                //System.out.print(dividend.split("x\\^")[0]+"  "+dividend.split("x\\^")[1]+"  "+dividend.split("x\\^")[2]+"  "+dividend.split("x\\^")[3]);
 	}
 }
