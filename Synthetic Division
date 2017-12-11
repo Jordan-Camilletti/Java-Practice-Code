@@ -17,7 +17,8 @@ public class SyntheticDivision {
                 System.out.println(x+"\n");
                 System.out.println(coefficients[0]);
                 for(int n=1;n<coefficients.length;n++){
-                    System.out.println(coefficients[n]+coefficients[n-1]*x);
+                    coefficients[n]+=(coefficients[n-1]*x);
+                    System.out.println(coefficients[n]);
                 }
         }
 }
