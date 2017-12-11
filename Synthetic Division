@@ -1,10 +1,16 @@
 /**/
 
 public class SyntheticDivision {
+        public static String format(String e){//Formats an equation for proper use(4x^2+3 -> 4x^2+0x^1+3x^0)
+            String dividend=e.split("/")[0];
+            String divisor=e.split("/")[1];
+            return("s");
+        }
+    //(4x^4-3x^2+9x+4) -> (4x^4+0x^3+-3x^2+9x^1+4x^0)
 	public static void main(String[] args){
-		String equation="1x^2+5x^1+6x^0/1x-1";
-		String[] dividend=(equation.split("/")[0]).split("x\\^");
-		String[] divisor=(equation.split("/")[1]).split("x");
+		String equation="2x^3+5x^2+0x^1+9x^0/1x+3";
+		String[] dividend=(equation.split("/")[0]).split("x\\^");//left side of equation
+		String[] divisor=(equation.split("/")[1]).split("x");//right side of equation
 		int x=(Integer.parseInt(divisor[1])*-1)/Integer.parseInt(divisor[0]);
                 int topPower=Integer.parseInt(dividend[1].split("\\+")[0])-1;
                 int[] coefficients=new int[dividend.length-1];
