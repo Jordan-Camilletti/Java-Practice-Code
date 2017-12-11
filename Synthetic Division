@@ -1,1 +1,11 @@
 /**/
+
+public class SyntheticDivision {
+	public static void main(String[] args){
+		String equation="1x/3x+3";
+		String dividend=equation.split("/")[0];
+		String[] divisor=(equation.split("/")[1]).split("x");
+		divisor[1]=divisor[1].substring(1, divisor[1].length());
+		System.out.println((Integer.parseInt(divisor[1])*-1)/Integer.parseInt(divisor[0]));
+	}
+}
