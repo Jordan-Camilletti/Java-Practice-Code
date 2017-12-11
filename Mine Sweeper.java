@@ -1,8 +1,6 @@
 /*This is a text version of minesweeper, enter the X and Y coords and wether you want to flag the spot(F), reveal the spot(R), not select the spot(anything else).
 Created by Jordan Camilletti*/
 
-package mine.sweeper;
-
 import java.util.*;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
