@@ -6,7 +6,7 @@ public class SyntheticDivision {
         for(int num=0;num<dividend.length;num++){
         	for(int n=0;n<dividend[num].length();n++){
         		if((dividend[num].substring(n, n+1)).equals("-")){
-        			dividend[num]=dividend[num].substring(0,n)+dividend[num].substring(n,dividend[num].length());
+        			
         		}
         	}
         }
