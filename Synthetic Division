@@ -2,14 +2,15 @@
 
 public class SyntheticDivision {
         public static String format(String e){//Formats an equation for proper use(4x^2+3 -> 4x^2+0x^1+3x^0)
-            String dividend=e.split("/")[0];
+            String[] dividend=(e.split("/")[0]).split("\\+");
             String divisor=e.split("/")[1];
             return("s");
         }
     //(4x^4-3x^2+9x+4) -> (4x^4+0x^3+-3x^2+9x^1+4x^0)
 	public static void main(String[] args){
 		String equation="2x^3+5x^2+0x^1+9x^0/1x+3";
-		String[] dividend=(equation.split("/")[0]).split("x\\^");//left side of equation
+                System.out.print(format(equation));
+		/*String[] dividend=(equation.split("/")[0]).split("x\\^");//left side of equation
 		String[] divisor=(equation.split("/")[1]).split("x");//right side of equation
 		int x=(Integer.parseInt(divisor[1])*-1)/Integer.parseInt(divisor[0]);
                 int topPower=Integer.parseInt(dividend[1].split("\\+")[0])-1;
@@ -18,10 +19,10 @@ public class SyntheticDivision {
                 for(int n=1;n<dividend.length-1;n++){
                     coefficients[n]=Integer.parseInt(dividend[n].split("\\+")[1]);
                 }
-                /*for(int n=0;n<coefficients.length;n++){
+                for(int n=0;n<coefficients.length;n++){
                     System.out.println(coefficients[n]);
                 }
-                System.out.println(x+"\n");*/
+                System.out.println(x+"\n");
                 System.out.println(coefficients[0]+"x^"+topPower); 
                 for(int n=1;n<coefficients.length;n++){
                     coefficients[n]+=(coefficients[n-1]*x);
@@ -30,6 +31,6 @@ public class SyntheticDivision {
                     }else{
                         System.out.println(coefficients[n]+"x^"+(topPower-n));
                     }
-                }
+                }*/
         }
 }
