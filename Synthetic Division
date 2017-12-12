@@ -1,9 +1,16 @@
 /**/
 
 public class SyntheticDivision {
-    public static String format(String e){//Formats an equation for proper use(4x^3-2x^2+3 -> 4x^3+-2x^2+0x^1+3x^0)
+    public static int format(String e){//Formats an equation for proper use(4x^3-2x^2+3 -> 4x^3+-2x^2+0x^1+3x^0)
         String[] dividend=(e.split("/")[0]).split("\\-");//(4x^3 2x^2+3)
-        String plusDividend=String.join("+-", dividend);//(4x^3+-2x^2+3)
+        String[] plusDividend=(String.join("+-", dividend)).split("\\+");//(4x^3 -2x^2 3)
+        int topPower=Integer.parseInt((dividend[0].split("\\^"))[1]);//3
+        for(int n=0;n<plusDividend.length;n++){
+            if(plusDividend[n].stufff!=topPower-#){
+                //add 0x^topPower-#
+            }
+        }
+        return(69420);
         //String divisor=e.split("/")[1];
     }
 
@@ -15,7 +22,7 @@ public static void main(String[] args){
 	int x=(Integer.parseInt(divisor[1])*-1)/Integer.parseInt(divisor[0]);
             int topPower=Integer.parseInt(dividend[1].split("\\+")[0])-1;
             int[] coefficients=new int[dividend.length-1];
-            coefficients[0]=Integer.parseInt(dividend[0]);
+            coefficients[0]=Integer.parseInt(dividend[0]);//the numbers before x
             for(int n=1;n<dividend.length-1;n++){
                 coefficients[n]=Integer.parseInt(dividend[n].split("\\+")[1]);
             }
@@ -27,7 +34,7 @@ public static void main(String[] args){
             for(int n=1;n<coefficients.length;n++){
                 coefficients[n]+=(coefficients[n-1]*x);
                 if(topPower-n<0){
-                    System.out.println(coefficients[n]+"/"+(equation.split("/")[1]));
+                    System.out.println(coefficients[n]+"/"+(equation.split("/")[1]));//remainder
                 }else{
                     System.out.println(coefficients[n]+"x^"+(topPower-n));
                 }
