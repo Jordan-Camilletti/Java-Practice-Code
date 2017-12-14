@@ -1,7 +1,5 @@
 /**/
 
-package synthetic.division;
-
 public class SyntheticDivision {
     public static String format(String e){//Formats an equation for proper use(4x^3-2x^2+3 -> 4x^3+-2x^2+0x^1+3x^0)
         String[] dividend=(e.split("/")[0]).split("\\-");//(4x^3 2x^2+3)
@@ -9,7 +7,7 @@ public class SyntheticDivision {
         int topPower=Integer.parseInt((dividend[0].split("\\^"))[1]);//3
         for(int n=0;n<plusDividend.length;n++){
             if(!plusDividend[n].contains("x^")) plusDividend[n]=plusDividend[n]+"x^0";//(4x^3 -2x^2 3x^0)
-            while(Integer.parseInt(plusDividend[n].split("\\^")[1])!=topPower-n){
+            if(Integer.parseInt(plusDividend[n].split("\\^")[1])!=topPower-n){
                 //add 0x^(topPower-n)
                 plusDividend[n]="0x^"+(topPower-n)+"+"+plusDividend[n];//(4x^3 -2x^2 0x^1+3x^0)
                 topPower-=1;
@@ -21,7 +19,7 @@ public class SyntheticDivision {
 
     public static void main(String[] args){
         String equation="3x^4+4x^3+-32x^2+-5x^1+-20x^0/1x+4";
-        System.out.print(format("4x^3-2x^2+3/5"));
+        System.out.print(format("4x^4-2x^3+3/5"));
         /*String[] dividend=(equation.split("/")[0]).split("x\\^");//left side of equation
         String[] divisor=(equation.split("/")[1]).split("x");//right side of equation
         int x=(Integer.parseInt(divisor[1])*-1)/Integer.parseInt(divisor[0]);
