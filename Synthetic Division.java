@@ -1,4 +1,10 @@
-/**/
+/*Synthetic division is a 'synthetic' way of doing division with two terms that each involve variables
+http://www.purplemath.com/modules/synthdiv.htm is a visualized way of doing it
+Find the value of x by setting the divisor to zero and sovling
+Them multiply the value by the coefficient and add that sum to the next coefficient(the first coefficient remains unchanged)
+Finaly set the row of new coefficients to the highest power in the dividend-1
+If there is still a coefficient left after x^0 is used, that is set to the remainder(written as coefficient/divisor)
+Created by Jordan Camilletti*/
 
 public class SyntheticDivision {
 	public static String format(String e){//Formats an equation for proper use(4x^3-2x^2+3/x-5 -> 4x^3+-2x^2+0x^1+3x^0/1x+-5)
