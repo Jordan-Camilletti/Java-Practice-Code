@@ -1,5 +1,4 @@
-/*Given a string, 
-compute recursively a new string where all the lowercase 'x' chars have been moved to the end of the string.*/
+/*Given a string, compute recursively a new string where all the lowercase 'x' chars have been moved to the end of the string.*/
 
 public String endX(String str) {
   if(str.length()<1){
