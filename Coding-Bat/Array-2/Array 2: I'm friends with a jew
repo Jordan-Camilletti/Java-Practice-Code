@@ -1,1 +1,7 @@
 /**/
+
+public boolean sameEnds(int[] nums, int len) {
+  for(int n=0;n<len;n++){
+    if(nums[n]!=nums[nums.length]) return(false);
+  }return(true);
+}
