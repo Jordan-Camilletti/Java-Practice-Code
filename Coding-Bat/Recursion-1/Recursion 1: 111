@@ -2,7 +2,7 @@
 
 public int count11(String str) {
   if(str.length()<=2){
-    if(str.equals("11")
+    if(str.equals("11"))
       return(1);
     return(0);
   }
