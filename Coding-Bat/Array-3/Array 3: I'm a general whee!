@@ -1,1 +1,10 @@
 /**/
+
+public int[] fix34(int[] nums) {
+  for(int n=0;n<nums.length-1;n++){
+    if(nums[n]==3){
+      
+    }
+  }
+  return(nums);
+}
