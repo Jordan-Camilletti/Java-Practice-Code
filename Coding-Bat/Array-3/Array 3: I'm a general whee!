@@ -1,7 +1,6 @@
 /**/
 
 public int[] fix34(int[] nums) {
-  int swap=0;
   for(int n=0;n<nums.length-1;n++){
     if(nums[n]==3){
       for(int n2=n+1;n2<nums.length;n2++){
