@@ -1,14 +1,14 @@
 /**/
 
 public int[] fix34(int[] nums) {
+  int n2=0;
   for(int n=0;n<nums.length-1;n++){
     if(nums[n]==3){
-      for(int n2=n+1;n2<nums.length;n2++){
-        if(nums[n2]==4){
-          nums[n2]=nums[n+1];
-          nums[n+1]=4;
-        }
-      }
+      n2=n;
+      while(nums[n2]!=4)
+        n2++;
+      nums[n2]=nums[n+1];
+      nums[n+1]=4;
     }
   }
   return(nums);
