@@ -2,12 +2,11 @@
 Return a version of the given array where every instance of the given value which is alone is replaced by whichever value to its left or right is larger.*/
 
 public int[] notAlone(int[] nums, int val) {
-  if(nums.length<=1) return nums;
-  for(int x=1;x<nums.length-1;x++){
-    if(nums[x]==val&&nums[x-1]!=val&&nums[x+1]!=val){
-      if(nums[x-1]>nums[x+1]) nums[x]=nums[x-1];
-      else nums[x]=nums[x+1];
+  for(int i=1;i<nums.length-1;i++){
+    if(nums[i]==val && nums[i-1]!=val && nums[i+1]!=val){
+      nums[i]=Math.max(nums[i-1],nums[i+1]);
     }
   }
   return(nums);
 }
+
