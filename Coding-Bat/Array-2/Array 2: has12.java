@@ -3,12 +3,14 @@ and those values are different from it.
 Return a version of the given array where every instance of the given value which is alone is replaced by 
 whichever value to its left or right is larger.*/
 
-public int[] notAlone(int[] nums, int val) {
-  if(nums.length<=1) return nums;
-  if(nums[0]==val&&nums[1]!=val) nums[0]=nums[1];
-  for(int x=1;x<nums.length-1;x++){
-    
+public boolean has12(int[] nums) {
+  for(int i=0;i<nums.length;i++){
+    if(nums[i]==1){
+      for(int n=i;n<nums.length;n++){
+        if(nums[n]==2)
+          return(true);
+      }
+    }
   }
-  if(nums[nums.length-1]==val&&nums[nums.length-2]!=val) nums[nums.length-1]=nums[nums.length-2];
-  return(nums);
+  return(false);
 }
