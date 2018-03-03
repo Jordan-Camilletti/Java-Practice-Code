@@ -1,1 +1,11 @@
 /**/
+
+public int[] notAlone(int[] nums, int val) {
+  if(nums.length<=1) return nums;
+  if(nums[0]==val&&nums[1]!=val) nums[0]=nums[1];
+  for(int x=1;x<nums.length-1;x++){
+    
+  }
+  if(nums[nums.length-1]==val&&nums[nums.length-2]!=val) nums[nums.length-1]=nums[nums.length-2];
+  return(nums);
+}
