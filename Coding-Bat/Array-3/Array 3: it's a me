@@ -1,5 +1,15 @@
 /**/
 
 public int[] fix45(int[] nums) {
-  
+  for(int i=0;i<nums.length;i++){
+    if(nums[i]==4 && nums[i+1]!=5){
+      for(int n=0;n<nums.length;n++){
+        if((n==0 && nums[n]==5) || (nums[n]==5 && nums[n-1]!=4)){
+          nums[n]=nums[i+1];
+          nums[i+1]=5;
+        }
+      }
+    }
+  }
+  return(nums);
 }
