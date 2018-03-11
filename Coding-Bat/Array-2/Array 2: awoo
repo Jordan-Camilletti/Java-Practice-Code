@@ -1,1 +1,13 @@
 /**/
+
+public boolean twoTwo(int[] nums) {
+  for(int n=0;n<nums.length;n++){
+    if(n==0 && nums[n]==2 && nums[n+1]!=2){
+      return(false);
+    }else if(n==nums.length-1 && nums[n]==2 && nums[n-1]!=2){
+      return(false);
+    }else if(n!=0 && n!=nums.length-1 &&nums[n]==2 && (nums[n+1]!=2 && nums[n-1]!=2))
+      return(false);
+  }
+  return(true);
+}
