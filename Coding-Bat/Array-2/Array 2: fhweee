@@ -1,1 +1,9 @@
 /**/
+
+public int[] fizzArray3(int start, int end) {
+  int[] arr=new int[end-start];
+  for(int n=start;n<end;n++){
+    
+  }
+  return(arr);
+}
