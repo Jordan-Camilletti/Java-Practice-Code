@@ -12,4 +12,5 @@ public int[] zeroFront(int[] nums) {
       n-=1;
     }
   }
+  return(nums2);
 }
