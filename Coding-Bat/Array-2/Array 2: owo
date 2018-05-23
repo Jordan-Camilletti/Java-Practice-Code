@@ -1,2 +1,15 @@
 /**/
 
+public int[] zeroFront(int[] nums) {
+  int[] nums2= new int[nums.length];
+  int nZ=0,n=nums.length;
+  for(int x:nums){
+    if(x==0){
+      nums2[nZ]=0;
+      nz+=1;
+    }else{
+      nums2[n]=x;
+      n-=1;
+    }
+  }
+}
