@@ -1,14 +1,11 @@
 /**/
 
-public int strDist(String str, String sub) {
-  if(str.equals(sub)) return(1);
-  if(str.length()<=sub.length()*2) return(0);
-  if(str.substring(0,sub.length()).equals(sub) && str.substring(str.length()-sub.length()).equals(sub)){
-    return(str.length());
-  }
+public boolean strCopies(String str, String sub, int n) {
+  if(str.length()<sub.length() && n!=0) return(false);
+  if(str.equals(sub) && n==1) return(true);
   if(str.substring(0,sub.length()).equals(sub)){
-    return(strDist(str.substring(0,str.length()-1),sub));
-  }else if(str.substring(str.length()-sub.length()).equals(sub)){
-    return(strDist(1,sub));
+    return(strCopies(str.substring(sub.length()),sub,n-1);
+  }else{
+    return(strCopies(str.substring(1),sub,n));
   }
 }
