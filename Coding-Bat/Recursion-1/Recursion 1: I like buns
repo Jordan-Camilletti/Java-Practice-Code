@@ -1,10 +1,10 @@
 /**/
 
 public boolean strCopies(String str, String sub, int n) {
-  if(str.length()<sub.length() && n!=0) return(false);
-  if(str.equals(sub) && n==1) return(true);
+  if(str.length()<sub.length()) return(n==0);
+  if(str.equals(sub)) return(n==1);
   if(str.substring(0,sub.length()).equals(sub)){
-    return(strCopies(str.substring(sub.length()),sub,n-1);
+    return(strCopies(str.substring(1),sub,n-1));
   }else{
     return(strCopies(str.substring(1),sub,n));
   }
