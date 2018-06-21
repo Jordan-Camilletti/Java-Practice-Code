@@ -7,7 +7,7 @@ public int[] post4(int[] nums) {
   for(int n=nums.length;n>0;n--){
     if(nums[n-1]==4){
       int[] nums2=new int[nums.length-n];
-      return(Arrays.copyOfRange(nums, n, nums.length));
+      return(Arrays.copyOfRange(nums,n,nums.length));
     }
   }
   return(nums);
