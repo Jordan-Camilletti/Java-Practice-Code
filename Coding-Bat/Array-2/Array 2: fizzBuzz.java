@@ -2,13 +2,13 @@ public String[] fizzBuzz(int start, int end) {
   String[] nums=new String[end-start];
   for(int n=start;n<end;n++){
     if(n%3==0 && n%5==0){
-      nums[n]="FizzBuzz";
+      nums[n-start]="FizzBuzz";
     }else if(n%3==0){
-      nums[n]="Fizz";
+      nums[n-start]="Fizz";
     }else if(n%5==0){
-      nums[n]="Buzz";
+      nums[n-start]="Buzz";
     }else{
-      nums[n]=n;  
+      nums[n-start]=Integer.toString(n);  
     }
   }
   return(nums);
